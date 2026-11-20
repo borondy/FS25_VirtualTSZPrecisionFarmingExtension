@@ -95,17 +95,17 @@ Mindegyiknél: `vtszNutrientSet` kezdőérték, majd kijuttatás, mintavétel/r�
 
 ## 5b. Automatikus mennyiség (alap tápanyag)
 - [x] 5b.1 `vtszSelfTest auto`: az alapértelmezett alap (15-15-20 → K, 0-46-0 → P, 15-15-15 → N, 8-24-24 → P) és a mennyiségképlet _(auto)_
-- [ ] 5b.2 Kálisó 60 (N nélküli) a gépben: `Bal Alt + ,` bekapcsolja az automatát, a HUD `(auto K)`-t mutat, a mennyiség a felfedett térkép szerint változik (hiányos mezőn több, a cél fölött 0)
+- [ ] 5b.2 Kálisó 60 (N nélküli) a gépben: `Bal Alt + ,` bekapcsolja az automatát, a HUD `AUTO K`-val kezdődő sort mutat, a mennyiség a felfedett térkép szerint változik (hiányos mezőn több, a cél fölött 0)
 - [ ] 5b.2b Az automata pontosan a mezőinfó hiányát juttatja ki (nincs építési idő, nincs elvonás-pótlás): `vtszNutrientSet <mező> K -150` és `P -200`, búzával: Kálisó 60 automata ≈ 150 + 22 = 172 kg K2O/ha, TSP ≈ 200 + 0 kg P2O5/ha (a mezőinfó két száma közti különbség). Nagy hiánynál (pl. K -400) a termék `rateControl` max értéke és a `maxLitersPerHa` korlátozza: Kálisó 60 max 450 l/ha ≈ 297 kg K2O/ha egy menetben, a hiány több menetben épül le _(a képlet: `vtszSelfTest auto`, `AUTO.units.K.gap`, `.cropGap`)_
 - [ ] 5b.2c Az automata a cél fölött 0 l/ha (`vtszNutrientSet <mező> P 100`), P-nél savanyú mezőn (pH ≈ 5,0, vályog) is: az automata a pH-t nem veszi figyelembe, `vtszNutrientSet <mező> P 0` után 0 l/ha (a rés a talajcélig 0), de a mezőinfó a `alacsony felvehetőség (pH)` figyelmeztetést mutatja, és a hozamtényező 1 alatt van _(`AUTO.units.P.phIgnored`)_
 - [ ] 5b.3 Talajmintavétel nélküli (fedett) területen az automata a kézi mennyiséget használja, nincs hiba
-- [ ] 5b.4 NPK 8-24-24 PF automatával: az alap alapértelmezetten P; `Bal Alt + B` K-ra vált, a HUD `(auto K)`; a l/ha a K igényből jön, a PF N térképe annyi N-t kap, amennyi a kijuttatott literekben van (nincs eltérés)
+- [ ] 5b.4 NPK 8-24-24 PF automatával: az alap alapértelmezetten P; `Bal Alt + B` K-ra vált, a HUD `AUTO K`-val kezdődik; a l/ha a K igényből jön, a PF N térképe annyi N-t kap, amennyi a kijuttatott literekben van (nincs eltérés)
 - [ ] 5b.5 Alap N-re állítva a PF saját automatája dolgozik, mint a mod nélkül
 - [ ] 5b.6 Termékváltás után az alap visszaáll az alapértelmezettre; a gomb csak ≥ 2 tápanyagú terméknél aktív
 - [ ] 5b.7 Dedikált szerver: a kliens HUD-ja a szerver mennyiségét mutatja, a be/ki és az alap szinkronizál
 - [ ] 5b.8 A PF kézi módja és a kézi mennyiség (N nélküli terméknél `Bal Ctrl + K` / `,`) változatlanul működik
 - [ ] 5b.9 Mintavétel nélküli (fedett) talajon a mod saját P/K automatája a kézi mennyiséget adja (N nélküli termékek); a PF N automatája a PF szerinti
-- [x] 5b.10 Hígtrágya: traktor + tartály + ejtőfüggöny: `Bal Alt + B` aktív, a HUD `(auto N)`-t mutat, N alapnál a PF szerinti ~110 kg N/ha körüli mennyiség, K/P-re váltva a l/ha változik; tartálycsere után az alap visszaáll N-re; a minimap követi a terméket
+- [x] 5b.10 Hígtrágya: traktor + tartály + ejtőfüggöny: `Bal Alt + B` aktív, a HUD `AUTO N`-nel kezdődik, N alapnál a PF szerinti ~110 kg N/ha körüli mennyiség, K/P-re váltva a l/ha változik; tartálycsere után az alap visszaáll N-re; a minimap követi a terméket
 - [x] 5b.11 Trágya, Fermentált és Hígtrágya alapja N, NPK 8-24-24 alapja P (`vtszSelfTest auto`)
 
 ## 6. Minimap kijuttatás közben

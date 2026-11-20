@@ -554,7 +554,7 @@ function VtszNutrients:getAutoNitrogenStates(context, sprayTypeIndex, fruitHint,
 	end
 	local liters = self:getAutoRateAt(fillTypeIndex, baseId, x, z, plannedFruit)
 	if liters == nil then
-		return nil
+		return 0 -- no data (off the field, soil not sampled): no spray, not PF's default rate
 	end
 	local states = math.floor(liters / litersPerKgN / nitrogenMap.amountPerState + 0.5)
 	-- nitrogen cap: never more N than PF's own auto mode would apply here (the product carries N along with P / K, and

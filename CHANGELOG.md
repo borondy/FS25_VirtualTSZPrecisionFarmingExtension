@@ -2,6 +2,13 @@
 
 Newest first. Version numbers follow `modDesc.xml`.
 
+## 1.0.0.1 (2026-11-20)
+
+Fix update.
+
+- Fix: automatic P/K rate no longer overdoses off the field. With no data under the sprayer (off the field, soil not sampled) the machine now spreads nothing; before, nitrogen-free products used the manual rate (230 l/ha seen) and products with N used PF's rate, which climbed to about 950 l/ha.
+- HUD: the first line starts with the auto base nutrient (`AUTO K | NPK (8-24-24): 60 l/ha`); with no data it says `no data, no spray`.
+
 ## 1.0.0 (2026-11-19)
 
 First stable release.
@@ -19,6 +26,13 @@ First stable release.
 - Documentation: full player wiki in English and Hungarian.
 
 ---
+
+## 1.0.0.1 (2026-11-20) – magyar
+
+Javító frissítés.
+
+- Javítás: az automatikus P/K mennyiség már nem adagol túl a táblán kívül. Ha nincs adat a permetező alatt (táblán kívül, nem mintázott talaj), a gép nem szór; korábban a nitrogénmentes termékek a kézi mennyiséget használták (230 l/ha látszott), az N-es termékek pedig a PF mennyiségét, ami kb. 950 l/ha-ig nőtt.
+- HUD: az első sor az automata alap tápanyagával kezdődik (`AUTO K | NPK (8-24-24): 60 l/ha`); adat hiányában „nincs adat, nem szór”.
 
 ## 1.0.0 (2026-11-19) – magyar
 

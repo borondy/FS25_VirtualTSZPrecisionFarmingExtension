@@ -130,7 +130,7 @@ A P vagy K alapú mennyiség sosem juttat ki több nitrogént, mint amennyit a P
 ### Pontosság és mintavétel nélküli talaj
 
 - A PF a nitrogént 5 kg N/ha-os lépcsőkben kezeli, ezért az N-t tartalmazó termékeknél a mennyiség is lépcsőzik: az NPK (15-15-15)-nél egy lépcső kb. 32 l/ha, az NPK (8-24-24)-nél kb. 60 l/ha. Az eredmény így a kívánt értéktől kb. ±16–30 l/ha-ral térhet el. A nitrogénmentes termékeknél nincs ilyen kerekítés.
-- Ahol a talajminta még nincs felfedve, a mod P/K automatája nem ad értéket, és a gép a kézi mennyiséget használja (a HUD ezt jelzi: „nincs adat, kézi”). Először mintavételezz: [Első lépések](HU-01-Elso-lepesek).
+- Ahol nincs adat (a talajminta még nincs felfedve, vagy a gép a táblán kívül van), a mod P/K automatája nem ad értéket. P vagy K alap esetén a gép ilyenkor nem szór (nitrogénmentes termékeknél a HUD: „nincs adat, nem szór”). Először mintavételezz: [Első lépések](HU-01-Elso-lepesek).
 - A bekapcsolt állapot és az alap tápanyag multiplayerben szinkronizál; ezt még nem teszteltük multiplayerben.
 
 ## Termékzár
@@ -146,7 +146,7 @@ Ha két különböző, nitrogént tartalmazó terméket akarsz egymás után sz�
 
 ## HUD, minitérkép, súgó
 
-**HUD.** Szórás közben a Precision Farming permetezőpanelének alján két sor látszik: a termék és a l/ha, alatta `N | P2O5 | K2O kg/ha`, vagyis hogy mennyi tápanyagot juttatsz ki hektáronként. Az alapjáték műtrágyájánál a P és K csak bekapcsolt `baseFertilizer` mellett látszik. Bekapcsolt automatánál a HUD az alap tápanyagot is mutatja, például `(auto K)`. A HUD-sort, valamint a HUD értéke és a ténylegesen kijuttatott mennyiség egyezését játékban még nem teszteltük.
+**HUD.** Szórás közben a Precision Farming permetezőpanelének alján két sor látszik: a termék és a l/ha, alatta `N | P2O5 | K2O kg/ha`, vagyis hogy mennyi tápanyagot juttatsz ki hektáronként. Az alapjáték műtrágyájánál a P és K csak bekapcsolt `baseFertilizer` mellett látszik. Bekapcsolt automatánál a HUD-sor az alap tápanyaggal kezdődik, például `AUTO K | NPK (8-24-24): 60 l/ha`. A HUD-sort, valamint a HUD értéke és a ténylegesen kijuttatott mennyiség egyezését játékban még nem teszteltük.
 
 **Műtrágyatartályos vetőgépek** (műtrágyázó vetőgépek) úgy működnek, mint a permetezők: a HUD, a kézi és az automata mennyiség gombjai és az alap tápanyag választása azonos, a tápanyag vetés közben kerül a térképekbe. Játékban még nem tesztelt.
 

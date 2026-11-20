@@ -238,11 +238,11 @@ function VtszSprayer:vtszGetAutoBase(fillTypeIndex)
 	return VtszNutrients:getDefaultAutoBase(fillTypeIndex)
 end
 
--- rate in use: the automatic one when it has data, else the one set by hand
+-- rate in use: automatic on = the automatic one, no data (off the field, soil not sampled) = 0, no spray; else the one set by hand
 function VtszSprayer:vtszGetEffectiveRate(fillTypeIndex)
 	local spec = self[VtszSprayer.SPEC_TABLE_NAME]
-	if spec.autoOn and spec.autoRate ~= nil then
-		return spec.autoRate
+	if spec.autoOn then
+		return spec.autoRate or 0
 	end
 	return self:vtszGetRate(fillTypeIndex)
 end
@@ -524,7 +524,9 @@ function VtszSprayer:vtszGetHudRate(fillTypeIndex)
 	local spec = self[VtszSprayer.SPEC_TABLE_NAME]
 	if VtszNutrients:isRateControlled(fillTypeIndex) then
 		local baseId = spec.autoOn and self:vtszGetAutoBase(fillTypeIndex) or nil
-		return self:vtszGetEffectiveRate(fillTypeIndex), baseId, baseId ~= nil and spec.autoRate == nil
+		local noData = baseId ~= nil and spec.autoRate == nil
+		-- no data: show the manual rate with the "no data" note (the sprayer itself sprays nothing then)
+		return noData and self:vtszGetRate(fillTypeIndex) or self:vtszGetEffectiveRate(fillTypeIndex), baseId, noData
 	end
 	-- PF managed product
 	local pfSpec = self:vtszGetPFSpec()
@@ -600,12 +602,15 @@ function VtszSprayer:onUpdate(dt,isActiveForInput, isActiveForInputIgnoreSelecti
 	end
 	local autoNote = ""
 	if baseId ~= nil then
-		local key = noData and "vtsz_hud_auto_nodata" or "vtsz_hud_auto"
-		autoNote = string.format(VtszNutrients:getText(key, " (auto %s)"), baseId)
+		local key = "vtsz_hud_auto"
+		if noData then
+			key = VtszNutrients:isRateControlled(fillTypeIndex) and "vtsz_hud_auto_nospray" or "vtsz_hud_auto_nodata"
+		end
+		autoNote = string.format(VtszNutrients:getText(key, "AUTO %s | "), baseId)
 	end
 	local fillType = g_fillTypeManager:getFillTypeByIndex(fillTypeIndex)
 	self.vtszHudLines = {
-		string.format(VtszNutrients:getText("vtsz_hud_rate", "%s: %d l/ha"), fillType.title, litersPerHa) .. autoNote,
+		autoNote .. string.format(VtszNutrients:getText("vtsz_hud_rate", "%s: %d l/ha"), fillType.title, litersPerHa),
 		string.format(VtszNutrients:getText("vtsz_hud_npk", "N %d | P2O5 %d | K2O %d kg/ha"), nitrogen, phosphorus, potassium)
 	}
 	local inputHelp = g_currentMission.hud.inputHelp

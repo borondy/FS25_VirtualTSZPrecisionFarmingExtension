@@ -132,7 +132,7 @@ A P- or K-based rate never applies more nitrogen than Precision Farming's own au
 ### Precision and unsampled soil
 
 - PF handles nitrogen in steps of 5 kg N/ha, so for products with N the rate moves in steps too: about 32 l/ha per step for NPK (15-15-15), about 60 l/ha for NPK (8-24-24). The result can differ from the wanted value by about ±16–30 l/ha. Nitrogen-free products have no such rounding.
-- Where the soil sample is not revealed yet, the mod's P/K automatic gives no value and the machine uses the manual rate (the HUD says "no data, manual"). Take a soil sample first: [Getting started](EN-01-Getting-Started).
+- Where there is no data (soil sample not revealed yet, or off the field), the mod's P/K automatic gives no value. With a P or K base the machine then spreads nothing (nitrogen-free products: the HUD says "no data, no spray"). Take a soil sample first: [Getting started](EN-01-Getting-Started).
 - The on/off state and the base nutrient sync in multiplayer; this has not been tested in multiplayer yet.
 
 ## Product lock
@@ -148,7 +148,7 @@ If you want to spread two different products that contain nitrogen one after ano
 
 ## HUD, minimap, help page
 
-**HUD.** While spreading, the Precision Farming sprayer box shows two lines at its bottom: the product and l/ha, and below it `N | P2O5 | K2O kg/ha`, the nutrients you apply per hectare. For the base game fertiliser, P and K only show when `baseFertilizer` is on. With the automatic rate on, the HUD also shows the base nutrient, for example `(auto K)`. The HUD line, and whether the HUD value matches the amount really spread, have not been tested in game yet.
+**HUD.** While spreading, the Precision Farming sprayer box shows two lines at its bottom: the product and l/ha, and below it `N | P2O5 | K2O kg/ha`, the nutrients you apply per hectare. For the base game fertiliser, P and K only show when `baseFertilizer` is on. With the automatic rate on, the HUD line starts with the base nutrient, for example `AUTO K | NPK (8-24-24): 60 l/ha`. The HUD line, and whether the HUD value matches the amount really spread, have not been tested in game yet.
 
 **Seeders with a fertiliser tank** (fertilising sowing machines) work like sprayers: the HUD, the manual and automatic rate keys and the base nutrient choice are the same, and the nutrients go into the maps while you sow. Not tested in game yet.
 
