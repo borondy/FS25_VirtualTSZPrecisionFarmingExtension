@@ -1,12 +1,15 @@
 .deploy-target
-.claude/settings.json
-.claude/settings.local.json
 .vscode/
 __pycache__/
 *.pyc
 *.zip
-CLAUDE.local.md
 create-zip.ps1
 tools/iconGen/
-.claude/worktrees/
 tools/video_cards/out/
+
+# Local-only, never published
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+TODOs/
+docs/wiki/_review-notes.md

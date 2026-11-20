@@ -1,0 +1,20 @@
+# Not part of the game mod (same list as the directory excludes in deploy.ps1)
+# The shared workflow already skips .git*, .vscode, *.md and docs/.
+
+# Local helpers
+create-zip.ps1
+deploy.ps1
+.deploy-target
+.zipignore
+.releaseignore
+.github/*
+.claude/*
+
+# Developer material
+assets/*
+tools/*
+tests/*
+TODOs/*
+
+# Generator output that must be merged by hand
+*.snippet.xml
