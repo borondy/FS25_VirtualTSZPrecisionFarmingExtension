@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1113" width="1200" height="1113" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="1200" height="1113" rx="18" ry="18" fill="#ffffff" stroke="#d8d2c8" stroke-width="2"/>
+<text x="56" y="52" font-size="30" font-weight="700" fill="#2b2b2b">Organic matter on a livestock silage rotation</text>
+<text x="56" y="84" font-size="21" fill="#555555">Rotation A on loam: green rye + silage maize / vetch rye + corn / winter barley / canola</text>
+<text x="280.0" y="663.9" font-size="20" fill="#555555" text-anchor="middle">1</text>
+<rect x="370.0" y="145.0" width="180.0" height="880.9" fill="#f6f3ee"/>
+<text x="460.0" y="663.9" font-size="20" fill="#555555" text-anchor="middle">2</text>
+<text x="640.0" y="663.9" font-size="20" fill="#555555" text-anchor="middle">3</text>
+<rect x="730.0" y="145.0" width="180.0" height="880.9" fill="#f6f3ee"/>
+<text x="820.0" y="663.9" font-size="20" fill="#555555" text-anchor="middle">4</text>
+<text x="1000.0" y="663.9" font-size="20" fill="#555555" text-anchor="middle">5</text>
+<text x="640.0" y="689.9" font-size="19" fill="#777777" text-anchor="middle">game year</text>
+<text x="56" y="131" font-size="19" font-weight="700" fill="#2b2b2b">Yield potential at harvest, %</text>
+<circle cx="910.4" cy="125" r="6" fill="#9a9a9a"/>
+<text x="921.4" y="131" font-size="16" fill="#555555">no limit (≥ 99.5 %)</text>
+<circle cx="766.8" cy="125" r="6" fill="#2f8f5b"/>
+<text x="777.8" y="131" font-size="16" fill="#555555">organic matter</text>
+<circle cx="665.2" cy="125" r="6" fill="#d98a1f"/>
+<text x="676.2" y="131" font-size="16" fill="#555555">potassium</text>
+<circle cx="555.2" cy="125" r="6" fill="#8e5ab0"/>
+<text x="566.2" y="131" font-size="16" fill="#555555">phosphorus</text>
+<circle cx="462.0" cy="125" r="6" fill="#3b7dd8"/>
+<text x="473.0" y="131" font-size="16" fill="#555555">nitrogen</text>
+<line x1="190" x2="1090" y1="265.0" y2="265.0" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="271.0" font-size="18" fill="#555555" text-anchor="end">95</text>
+<line x1="190" x2="1090" y1="194.4" y2="194.4" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="200.4" font-size="18" fill="#555555" text-anchor="end">100</text>
+<line x1="190" x2="1090" y1="265" y2="265" stroke="#999999" stroke-width="2"/>
+<line x1="248.5" x2="248.5" y1="265" y2="239.8" stroke="#d98a1f" stroke-width="3"/>
+<circle cx="248.5" cy="239.8" r="7" fill="#ffffff" stroke="#d98a1f" stroke-width="4"/>
+<text x="248.5" y="226.8" font-size="17" font-weight="700" fill="#2b2b2b" text-anchor="middle">96.8</text>
+<line x1="319.7" x2="319.7" y1="265" y2="206.7" stroke="#d98a1f" stroke-width="3"/>
+<circle cx="319.7" cy="206.7" r="7" fill="#ffffff" stroke="#d98a1f" stroke-width="4"/>
+<text x="319.7" y="193.7" font-size="17" font-weight="700" fill="#2b2b2b" text-anchor="middle">99.1</text>
+<line x1="434.8" x2="434.8" y1="265" y2="229.7" stroke="#8e5ab0" stroke-width="3"/>
+<circle cx="434.8" cy="229.7" r="7" fill="#ffffff" stroke="#8e5ab0" stroke-width="4"/>
+<text x="434.8" y="216.7" font-size="17" font-weight="700" fill="#2b2b2b" text-anchor="middle">97.5</text>
+<line x1="512.3" x2="512.3" y1="265" y2="202.6" stroke="#2f8f5b" stroke-width="3"/>
+<circle cx="512.3" cy="202.6" r="7" fill="#ffffff" stroke="#2f8f5b" stroke-width="4"/>
+<text x="512.3" y="189.6" font-size="17" font-weight="700" fill="#2b2b2b" text-anchor="middle">99.4</text>
+<line x1="637.1" x2="637.1" y1="265" y2="215.8" stroke="#3b7dd8" stroke-width="3"/>
+<circle cx="637.1" cy="215.8" r="7" fill="#ffffff" stroke="#3b7dd8" stroke-width="4"/>
+<text x="637.1" y="202.8" font-size="17" font-weight="700" fill="#2b2b2b" text-anchor="middle">98.5</text>
+<line x1="818.5" x2="818.5" y1="265" y2="204.9" stroke="#3b7dd8" stroke-width="3"/>
+<circle cx="818.5" cy="204.9" r="7" fill="#ffffff" stroke="#3b7dd8" stroke-width="4"/>
+<text x="818.5" y="191.9" font-size="17" font-weight="700" fill="#2b2b2b" text-anchor="middle">99.3</text>
+<line x1="968.5" x2="968.5" y1="265" y2="209.2" stroke="#3b7dd8" stroke-width="3"/>
+<circle cx="968.5" cy="209.2" r="7" fill="#ffffff" stroke="#3b7dd8" stroke-width="4"/>
+<text x="968.5" y="196.2" font-size="17" font-weight="700" fill="#2b2b2b" text-anchor="middle">99.0</text>
+<line x1="1039.7" x2="1039.7" y1="265" y2="199.9" stroke="#9a9a9a" stroke-width="3"/>
+<circle cx="1039.7" cy="199.9" r="7" fill="#ffffff" stroke="#9a9a9a" stroke-width="4"/>
+<text x="1039.7" y="186.9" font-size="17" font-weight="700" fill="#2b2b2b" text-anchor="middle">99.6</text>
+<line x1="190" x2="1090" y1="486.0" y2="486.0" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="492.0" font-size="19" fill="#555555" text-anchor="end">3.0</text>
+<line x1="190" x2="1090" y1="426.0" y2="426.0" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="432.0" font-size="19" fill="#555555" text-anchor="end">3.2</text>
+<line x1="190" x2="1090" y1="366.0" y2="366.0" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="372.0" font-size="19" fill="#555555" text-anchor="end">3.4</text>
+<text transform="translate(128,475.4) rotate(-90)" font-size="19" fill="#777777" text-anchor="middle">organic matter, %</text>
+<line x1="190" x2="1090" y1="635.9" y2="635.9" stroke="#999999" stroke-width="2"/>
+<line x1="190" x2="1090" y1="426.0" y2="426.0" stroke="#8a8a8a" stroke-width="2" stroke-dasharray="9 7"/>
+<text x="1098" y="424.0" font-size="17" fill="#666666">target</text>
+<text x="1098" y="443.0" font-size="17" fill="#666666">3.2 %</text>
+<polyline points="190.0,411.0 190.0,411.0 190.0,411.4 205.0,411.4 205.0,411.8 220.0,411.8 220.0,413.1 224.8,413.1 224.8,413.1 235.0,413.1 235.0,415.0 248.5,415.0 248.5,436.0 249.5,436.0 249.5,420.7 250.0,420.7 250.0,423.0 252.4,423.0 252.4,423.0 265.0,423.0 265.0,425.7 269.8,425.7 269.8,425.7 280.0,425.7 280.0,428.9 295.0,428.9 295.0,432.1 310.0,432.1 310.0,434.6 319.7,434.6 319.7,455.6 325.0,455.6 325.0,457.3 325.5,457.3 325.5,437.1 326.0,437.1 326.0,437.1 340.0,437.1 340.0,438.2 355.0,438.2 355.0,438.6 370.0,438.6 370.0,439.0 385.0,439.0 385.0,439.4 400.0,439.4 400.0,440.7 415.0,440.7 415.0,442.6 430.0,442.6 430.0,444.9 434.8,444.9 434.8,465.9 435.8,465.9 435.8,447.5 437.3,447.5 437.3,447.5 445.0,447.5 445.0,450.3 447.4,450.3 447.4,450.3 460.0,450.3 460.0,453.4 475.0,453.4 475.0,456.6 490.0,456.6 490.0,459.1 505.0,459.1 505.0,460.8 512.3,460.8 512.3,440.5 513.7,440.5 513.7,440.5 520.0,440.5 520.0,441.6 535.0,441.6 535.0,442.0 550.0,442.0 550.0,442.4 565.0,442.4 565.0,442.8 580.0,442.8 580.0,444.1 584.8,444.1 584.8,444.1 595.0,444.1 595.0,446.0 602.3,446.0 602.3,446.0 610.0,446.0 610.0,448.3 625.0,448.3 625.0,451.0 637.1,451.0 637.1,430.8 640.0,430.8 640.0,434.0 655.0,434.0 655.0,437.1 659.8,437.1 659.8,423.4 670.0,423.4 670.0,426.0 685.0,426.0 685.0,427.7 700.0,427.7 700.0,428.7 715.0,428.7 715.0,429.1 730.0,429.1 730.0,429.5 745.0,429.5 745.0,430.0 760.0,430.0 760.0,431.2 760.5,431.2 760.5,431.2 775.0,431.2 775.0,433.1 790.0,433.1 790.0,435.4 805.0,435.4 805.0,438.2 818.5,438.2 818.5,413.6 820.0,413.6 820.0,416.8 835.0,416.8 835.0,419.9 850.0,419.9 850.0,422.4 852.4,422.4 852.4,422.4 852.9,422.4 852.9,422.4 865.0,422.4 865.0,424.1 880.0,424.1 880.0,425.2 895.0,425.2 895.0,425.6 910.0,425.6 910.0,426.0 925.0,426.0 925.0,426.4 940.0,426.4 940.0,427.7 955.0,427.7 955.0,429.6 968.5,429.6 968.5,450.6 969.5,450.6 969.5,435.3 970.0,435.3 970.0,437.6 972.4,437.6 972.4,437.6 985.0,437.6 985.0,440.3 989.8,440.3 989.8,440.3 1000.0,440.3 1000.0,443.5 1015.0,443.5 1015.0,446.7 1030.0,446.7 1030.0,449.2 1039.7,449.2 1039.7,470.2 1045.0,470.2 1045.0,471.9 1045.5,471.9 1045.5,451.7 1046.0,451.7 1046.0,451.7" fill="none" stroke="#a8641a" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="248.5" y1="444.0" x2="248.5" y2="557.9" stroke="#7a7a7a" stroke-width="1.8"/>
+<line x1="319.7" y1="463.6" x2="319.7" y2="495.9" stroke="#7a7a7a" stroke-width="1.8"/>
+<line x1="434.8" y1="473.9" x2="434.8" y2="557.9" stroke="#7a7a7a" stroke-width="1.8"/>
+<line x1="512.3" y1="448.5" x2="512.3" y2="495.9" stroke="#7a7a7a" stroke-width="1.8"/>
+<line x1="637.1" y1="438.8" x2="637.1" y2="495.9" stroke="#7a7a7a" stroke-width="1.8"/>
+<line x1="818.5" y1="421.6" x2="818.5" y2="495.9" stroke="#7a7a7a" stroke-width="1.8"/>
+<line x1="968.5" y1="458.6" x2="968.5" y2="495.9" stroke="#7a7a7a" stroke-width="1.8"/>
+<line x1="1039.7" y1="478.2" x2="1039.7" y2="557.9" stroke="#7a7a7a" stroke-width="1.8"/>
+<rect x="236.5" y="557.9" width="120.7" height="54" rx="8" fill="#ffffff" stroke="#c9c2b6" stroke-width="1.5"/>
+<text x="296.9" y="579.9" font-size="16" font-weight="700" fill="#2b2b2b" text-anchor="middle">green rye</text>
+<text x="296.9" y="603.9" font-size="16" fill="#2b2b2b" text-anchor="middle">harvest −0.07</text>
+<rect x="255.4" y="495.9" width="128.6" height="54" rx="8" fill="#ffffff" stroke="#c9c2b6" stroke-width="1.5"/>
+<text x="319.7" y="517.9" font-size="16" font-weight="700" fill="#2b2b2b" text-anchor="middle">silage maize</text>
+<text x="319.7" y="541.9" font-size="16" fill="#2b2b2b" text-anchor="middle">chopping −0.07</text>
+<rect x="374.5" y="557.9" width="120.7" height="54" rx="8" fill="#ffffff" stroke="#c9c2b6" stroke-width="1.5"/>
+<text x="434.8" y="579.9" font-size="16" font-weight="700" fill="#2b2b2b" text-anchor="middle">vetch rye</text>
+<text x="434.8" y="603.9" font-size="16" fill="#2b2b2b" text-anchor="middle">harvest −0.07</text>
+<rect x="451.9" y="495.9" width="120.7" height="54" rx="8" fill="#ffffff" stroke="#c9c2b6" stroke-width="1.5"/>
+<text x="512.3" y="517.9" font-size="16" font-weight="700" fill="#2b2b2b" text-anchor="middle">corn</text>
+<text x="512.3" y="541.9" font-size="16" fill="#2b2b2b" text-anchor="middle">harvest +0.07</text>
+<rect x="625.1" y="495.9" width="120.7" height="54" rx="8" fill="#ffffff" stroke="#c9c2b6" stroke-width="1.5"/>
+<text x="685.4" y="517.9" font-size="16" font-weight="700" fill="#2b2b2b" text-anchor="middle">winter barley</text>
+<text x="685.4" y="541.9" font-size="16" fill="#2b2b2b" text-anchor="middle">harvest +0.07</text>
+<rect x="758.2" y="495.9" width="120.7" height="54" rx="8" fill="#ffffff" stroke="#c9c2b6" stroke-width="1.5"/>
+<text x="818.5" y="517.9" font-size="16" font-weight="700" fill="#2b2b2b" text-anchor="middle">canola</text>
+<text x="818.5" y="541.9" font-size="16" fill="#2b2b2b" text-anchor="middle">harvest +0.08</text>
+<rect x="908.2" y="495.9" width="120.7" height="54" rx="8" fill="#ffffff" stroke="#c9c2b6" stroke-width="1.5"/>
+<text x="968.5" y="517.9" font-size="16" font-weight="700" fill="#2b2b2b" text-anchor="middle">green rye</text>
+<text x="968.5" y="541.9" font-size="16" fill="#2b2b2b" text-anchor="middle">harvest −0.07</text>
+<rect x="975.4" y="557.9" width="128.6" height="54" rx="8" fill="#ffffff" stroke="#c9c2b6" stroke-width="1.5"/>
+<text x="1039.7" y="579.9" font-size="16" font-weight="700" fill="#2b2b2b" text-anchor="middle">silage maize</text>
+<text x="1039.7" y="603.9" font-size="16" fill="#2b2b2b" text-anchor="middle">chopping −0.07</text>
+<circle cx="248.5" cy="436.0" r="7" fill="#ffffff" stroke="#a8641a" stroke-width="4"/>
+<circle cx="319.7" cy="455.6" r="7" fill="#ffffff" stroke="#a8641a" stroke-width="4"/>
+<circle cx="434.8" cy="465.9" r="7" fill="#ffffff" stroke="#a8641a" stroke-width="4"/>
+<circle cx="512.3" cy="440.5" r="7" fill="#ffffff" stroke="#a8641a" stroke-width="4"/>
+<circle cx="637.1" cy="430.8" r="7" fill="#ffffff" stroke="#a8641a" stroke-width="4"/>
+<circle cx="818.5" cy="413.6" r="7" fill="#ffffff" stroke="#a8641a" stroke-width="4"/>
+<circle cx="968.5" cy="450.6" r="7" fill="#ffffff" stroke="#a8641a" stroke-width="4"/>
+<circle cx="1039.7" cy="470.2" r="7" fill="#ffffff" stroke="#a8641a" stroke-width="4"/>
+<circle cx="190.0" cy="411.0" r="7" fill="#ffffff" stroke="#a8641a" stroke-width="4"/>
+<circle cx="1046.0" cy="451.7" r="7" fill="#ffffff" stroke="#a8641a" stroke-width="4"/>
+<rect x="202" y="319" width="151.2" height="34" rx="8" fill="#ffffff" stroke="#c9c2b6" stroke-width="1.5"/>
+<text x="214" y="342" font-size="20" font-weight="700" fill="#2b2b2b">start 3.25 %</text>
+<line x1="190.0" y1="403.0" x2="202.0" y2="353" stroke="#7a7a7a" stroke-width="1.8"/>
+<line x1="1046.0" y1="443.7" x2="1046.0" y2="378" stroke="#7a7a7a" stroke-width="1.8"/>
+<rect x="660.4" y="319" width="429.6" height="59" rx="8" fill="#ffffff" stroke="#c9c2b6" stroke-width="1.5"/>
+<text x="1080" y="343" font-size="20" font-weight="700" fill="#2b2b2b" text-anchor="end">end 3.11 %</text>
+<text x="1080" y="368" font-size="20" fill="#2b2b2b" text-anchor="end">−0.14 percentage points in 5 game years</text>
+<text x="56" y="711.9" font-size="19" font-weight="700" fill="#2b2b2b">Fertilizer applications (kg/ha; manure, slurry and digestate in 1000 l/ha)</text>
+<line x1="190" x2="1090" y1="740.9" y2="740.9" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="746.9" font-size="17" fill="#555555" text-anchor="end">Slurry</text>
+<text x="259.5" y="745.9" font-size="14" fill="#2b2b2b" text-anchor="start">25</text>
+<text x="445.8" y="745.9" font-size="14" fill="#2b2b2b" text-anchor="start">30</text>
+<text x="979.5" y="745.9" font-size="14" fill="#2b2b2b" text-anchor="start">25</text>
+<circle cx="249.5" cy="740.9" r="6" fill="#7a5a2a"/>
+<circle cx="435.8" cy="740.9" r="6" fill="#7a5a2a"/>
+<circle cx="969.5" cy="740.9" r="6" fill="#7a5a2a"/>
+<line x1="190" x2="1090" y1="770.9" y2="770.9" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="776.9" font-size="17" fill="#555555" text-anchor="end">Manure</text>
+<text x="335.5" y="775.9" font-size="14" fill="#2b2b2b" text-anchor="start">14</text>
+<text x="1055.5" y="775.9" font-size="14" fill="#2b2b2b" text-anchor="start">14</text>
+<circle cx="325.5" cy="770.9" r="6" fill="#7a5a2a"/>
+<circle cx="1045.5" cy="770.9" r="6" fill="#7a5a2a"/>
+<line x1="190" x2="1090" y1="800.9" y2="800.9" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="806.9" font-size="17" fill="#555555" text-anchor="end">Digestate</text>
+<text x="669.8" y="805.9" font-size="14" fill="#2b2b2b" text-anchor="start">20</text>
+<circle cx="659.8" cy="800.9" r="6" fill="#7a5a2a"/>
+<line x1="190" x2="1090" y1="830.9" y2="830.9" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="836.9" font-size="17" fill="#555555" text-anchor="end">CAN 27</text>
+<text x="234.8" y="835.9" font-size="14" fill="#2b2b2b" text-anchor="start">250</text>
+<text x="279.8" y="835.9" font-size="14" fill="#2b2b2b" text-anchor="start">300</text>
+<text x="594.8" y="835.9" font-size="14" fill="#2b2b2b" text-anchor="start">330</text>
+<text x="770.5" y="835.9" font-size="14" fill="#2b2b2b" text-anchor="start">100</text>
+<text x="999.8" y="835.9" font-size="14" fill="#2b2b2b" text-anchor="start">350</text>
+<circle cx="224.8" cy="830.9" r="6" fill="#3b7dd8"/>
+<circle cx="269.8" cy="830.9" r="6" fill="#3b7dd8"/>
+<circle cx="584.8" cy="830.9" r="6" fill="#3b7dd8"/>
+<circle cx="760.5" cy="830.9" r="6" fill="#3b7dd8"/>
+<circle cx="989.8" cy="830.9" r="6" fill="#3b7dd8"/>
+<line x1="190" x2="1090" y1="860.9" y2="860.9" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="866.9" font-size="17" fill="#555555" text-anchor="end">Urea 46</text>
+<text x="457.4" y="865.9" font-size="14" fill="#2b2b2b" text-anchor="start">100</text>
+<circle cx="447.4" cy="860.9" r="6" fill="#3b7dd8"/>
+<line x1="190" x2="1090" y1="890.9" y2="890.9" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="896.9" font-size="17" fill="#555555" text-anchor="end">Nitrosol 30</text>
+<text x="612.3" y="895.9" font-size="14" fill="#2b2b2b" text-anchor="start">120</text>
+<circle cx="602.3" cy="890.9" r="6" fill="#3b7dd8"/>
+<line x1="190" x2="1090" y1="920.9" y2="920.9" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="926.9" font-size="17" fill="#555555" text-anchor="end">NPK 8-24-24</text>
+<text x="262.4" y="925.9" font-size="14" fill="#2b2b2b" text-anchor="start">200</text>
+<text x="982.4" y="925.9" font-size="14" fill="#2b2b2b" text-anchor="start">200</text>
+<circle cx="252.4" cy="920.9" r="6" fill="#2a9d8f"/>
+<circle cx="972.4" cy="920.9" r="6" fill="#2a9d8f"/>
+<line x1="190" x2="1090" y1="950.9" y2="950.9" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="956.9" font-size="17" fill="#555555" text-anchor="end">MAP 11-52</text>
+<text x="447.3" y="955.9" font-size="14" fill="#2b2b2b" text-anchor="start">200</text>
+<circle cx="437.3" cy="950.9" r="6" fill="#8e5ab0"/>
+<line x1="190" x2="1090" y1="980.9" y2="980.9" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="986.9" font-size="17" fill="#555555" text-anchor="end">TSP 46</text>
+<text x="862.4" y="985.9" font-size="14" fill="#2b2b2b" text-anchor="start">80</text>
+<circle cx="852.4" cy="980.9" r="6" fill="#8e5ab0"/>
+<line x1="190" x2="1090" y1="1010.9" y2="1010.9" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="1016.9" font-size="17" fill="#555555" text-anchor="end">Potash 60</text>
+<text x="336.0" y="1015.9" font-size="14" fill="#2b2b2b" text-anchor="start">300</text>
+<text x="523.7" y="1015.9" font-size="14" fill="#2b2b2b" text-anchor="start">150</text>
+<text x="862.9" y="1015.9" font-size="14" fill="#2b2b2b" text-anchor="start">60</text>
+<text x="1056.0" y="1015.9" font-size="14" fill="#2b2b2b" text-anchor="start">100</text>
+<circle cx="326.0" cy="1010.9" r="6" fill="#d98a1f"/>
+<circle cx="513.7" cy="1010.9" r="6" fill="#d98a1f"/>
+<circle cx="852.9" cy="1010.9" r="6" fill="#d98a1f"/>
+<circle cx="1046.0" cy="1010.9" r="6" fill="#d98a1f"/>
+<text x="56" y="1065" font-size="17" fill="#777777">OM changes are 6 times the real-world annual value per game year (timeScale 6); on the server 6 game years ≈ 1 real year. Simulation</text>
+<text x="56" y="1089" font-size="17" fill="#777777">with typical yields, not an in-game measurement.</text>
+</svg>

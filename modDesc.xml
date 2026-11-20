@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="108">
+    <author>Hunor</author>
+    <version>1.0.0.0</version>
+    <title>
+        <en>VirtualTSZ Precision Farming Extension</en>
+        <hu>VirtualTSZ Precision Farming kiegészítő</hu>
+    </title>
+    <description>
+        <en><![CDATA[Extends Precision Farming with phosphorus (P), potassium (K) and organic matter maps. Spreading manure, slurry, digestate and fertilizers updates the layers, harvest removes nutrients, and a low level lowers the yield (never above what Precision Farming allows). Requires Precision Farming and the [TR] Precision Farming Configurator (2048 x 2048 maps).]]></en>
+        <hu><![CDATA[A Precision Farming-et foszfor (P), kálium (K) és szervesanyag térképekkel bővíti. A trágya, hígtrágya, biogáz-iszap és műtrágyák kijuttatása frissíti a rétegeket, a betakarítás tápanyagot von el, az alacsony szint pedig csökkenti a termést (a Precision Farming által engedett érték fölé soha nem megy). Kell hozzá a Precision Farming és a [TR] Precision Farming Configurator (2048 x 2048 térképek).]]></hu>
+    </description>
+    <iconFilename>icon.dds</iconFilename>
+    <multiplayer supported="true"/>
+    <dependencies>
+        <dependency>FS25_precisionFarming</dependency>
+        <dependency>FS25_0_TRPFConfigurator</dependency>
+    </dependencies>
+    <l10n filenamePrefix="l10n/l10n"/>
+    <fillTypes filename="xml/fillTypes.xml"/>
+    <!-- spreader particle effect for the solid products (base FERTILIZER effect) -->
+    <motionPathEffects filename="xml/motionPathEffects.xml"/>
+
+    <storeItems>
+        <storeItem xmlFilename="shop/bigBag_PETISO27.xml"/>
+        <storeItem xmlFilename="shop/multiPurchase_bigBag_PETISO27.xml"/>
+        <storeItem xmlFilename="shop/bigBag_KARBAMID46.xml"/>
+        <storeItem xmlFilename="shop/multiPurchase_bigBag_KARBAMID46.xml"/>
+        <storeItem xmlFilename="shop/bigBag_MAP11_52.xml"/>
+        <storeItem xmlFilename="shop/multiPurchase_bigBag_MAP11_52.xml"/>
+        <storeItem xmlFilename="shop/bigBag_TSP46.xml"/>
+        <storeItem xmlFilename="shop/multiPurchase_bigBag_TSP46.xml"/>
+        <storeItem xmlFilename="shop/bigBag_SSP18.xml"/>
+        <storeItem xmlFilename="shop/multiPurchase_bigBag_SSP18.xml"/>
+        <storeItem xmlFilename="shop/bigBag_KALISO60.xml"/>
+        <storeItem xmlFilename="shop/multiPurchase_bigBag_KALISO60.xml"/>
+        <storeItem xmlFilename="shop/bigBag_PATENTKALI.xml"/>
+        <storeItem xmlFilename="shop/multiPurchase_bigBag_PATENTKALI.xml"/>
+        <storeItem xmlFilename="shop/bigBag_NPK15_15_15.xml"/>
+        <storeItem xmlFilename="shop/multiPurchase_bigBag_NPK15_15_15.xml"/>
+        <storeItem xmlFilename="shop/bigBag_NPK8_24_24.xml"/>
+        <storeItem xmlFilename="shop/multiPurchase_bigBag_NPK8_24_24.xml"/>
+        <storeItem xmlFilename="shop/ibc_NITROSOL30.xml"/>
+        <storeItem xmlFilename="shop/multiPurchase_ibc_NITROSOL30.xml"/>
+        <storeItem xmlFilename="shop/ibc_ELESZTOVINASZ.xml"/>
+        <storeItem xmlFilename="shop/multiPurchase_ibc_ELESZTOVINASZ.xml"/>
+    </storeItems>
+
+    <!-- TR Configurator registers the spray types and hands them to Precision Farming; solids go to spreaders, liquids to sprayers -->
+    <thPFConfig>
+        <sprayTypes>
+            <sprayType name="PETISO27" type="FERTILIZER" litersPerSecond="0.0048" sprayGroundType="FERTILIZER">
+                <applicationRate autoAdjustToFruit="true" regularRate="100">
+                    <soil soilTypeIndex="1" rate="40"/>
+                    <soil soilTypeIndex="2" rate="60"/>
+                    <soil soilTypeIndex="3" rate="80"/>
+                    <soil soilTypeIndex="4" rate="60"/>
+                </applicationRate>
+                <fertilizerUsage>
+                    <nitrogen amount="0.27"/>
+                </fertilizerUsage>
+                <mapping group="FERTILIZER" isLiquid="false"/>
+            </sprayType>
+            <sprayType name="KARBAMID46" type="FERTILIZER" litersPerSecond="0.0064" sprayGroundType="FERTILIZER">
+                <applicationRate autoAdjustToFruit="true" regularRate="100">
+                    <soil soilTypeIndex="1" rate="40"/>
+                    <soil soilTypeIndex="2" rate="60"/>
+                    <soil soilTypeIndex="3" rate="80"/>
+                    <soil soilTypeIndex="4" rate="60"/>
+                </applicationRate>
+                <fertilizerUsage>
+                    <nitrogen amount="0.46"/>
+                </fertilizerUsage>
+                <mapping group="FERTILIZER" isLiquid="false"/>
+            </sprayType>
+            <sprayType name="MAP11_52" type="FERTILIZER" litersPerSecond="0.005" sprayGroundType="FERTILIZER">
+                <applicationRate autoAdjustToFruit="true" regularRate="40">
+                    <soil soilTypeIndex="1" rate="16"/>
+                    <soil soilTypeIndex="2" rate="24"/>
+                    <soil soilTypeIndex="3" rate="32"/>
+                    <soil soilTypeIndex="4" rate="24"/>
+                </applicationRate>
+                <fertilizerUsage>
+                    <nitrogen amount="0.11"/>
+                </fertilizerUsage>
+                <mapping group="FERTILIZER" isLiquid="false"/>
+            </sprayType>
+            <sprayType name="TSP46" type="FERTILIZER" litersPerSecond="0.004364" sprayGroundType="FERTILIZER">
+                <mapping group="FERTILIZER" isLiquid="false"/>
+            </sprayType>
+            <sprayType name="SSP18" type="FERTILIZER" litersPerSecond="0.004571" sprayGroundType="FERTILIZER">
+                <mapping group="FERTILIZER" isLiquid="false"/>
+            </sprayType>
+            <sprayType name="KALISO60" type="FERTILIZER" litersPerSecond="0.004364" sprayGroundType="FERTILIZER">
+                <mapping group="FERTILIZER" isLiquid="false"/>
+            </sprayType>
+            <sprayType name="PATENTKALI" type="FERTILIZER" litersPerSecond="0.004034" sprayGroundType="FERTILIZER">
+                <mapping group="FERTILIZER" isLiquid="false"/>
+            </sprayType>
+            <sprayType name="NPK15_15_15" type="FERTILIZER" litersPerSecond="0.004571" sprayGroundType="FERTILIZER">
+                <applicationRate autoAdjustToFruit="true" regularRate="100">
+                    <soil soilTypeIndex="1" rate="40"/>
+                    <soil soilTypeIndex="2" rate="60"/>
+                    <soil soilTypeIndex="3" rate="80"/>
+                    <soil soilTypeIndex="4" rate="60"/>
+                </applicationRate>
+                <fertilizerUsage>
+                    <nitrogen amount="0.15"/>
+                </fertilizerUsage>
+                <mapping group="FERTILIZER" isLiquid="false"/>
+            </sprayType>
+            <sprayType name="NPK8_24_24" type="FERTILIZER" litersPerSecond="0.004571" sprayGroundType="FERTILIZER">
+                <applicationRate autoAdjustToFruit="true" regularRate="40">
+                    <soil soilTypeIndex="1" rate="16"/>
+                    <soil soilTypeIndex="2" rate="24"/>
+                    <soil soilTypeIndex="3" rate="32"/>
+                    <soil soilTypeIndex="4" rate="24"/>
+                </applicationRate>
+                <fertilizerUsage>
+                    <nitrogen amount="0.08"/>
+                </fertilizerUsage>
+                <mapping group="FERTILIZER" isLiquid="false"/>
+            </sprayType>
+            <sprayType name="NITROSOL30" type="FERTILIZER" litersPerSecond="0.0081" sprayGroundType="FERTILIZER">
+                <applicationRate autoAdjustToFruit="true" regularRate="100">
+                    <soil soilTypeIndex="1" rate="40"/>
+                    <soil soilTypeIndex="2" rate="60"/>
+                    <soil soilTypeIndex="3" rate="80"/>
+                    <soil soilTypeIndex="4" rate="60"/>
+                </applicationRate>
+                <fertilizerUsage>
+                    <nitrogen amount="0.3"/>
+                </fertilizerUsage>
+                <mapping group="FERTILIZER" isLiquid="true"/>
+            </sprayType>
+            <sprayType name="ELESZTOVINASZ" type="FERTILIZER" litersPerSecond="0.0081" sprayGroundType="FERTILIZER">
+                <applicationRate autoAdjustToFruit="true" regularRate="40">
+                    <soil soilTypeIndex="1" rate="16"/>
+                    <soil soilTypeIndex="2" rate="24"/>
+                    <soil soilTypeIndex="3" rate="32"/>
+                    <soil soilTypeIndex="4" rate="24"/>
+                </applicationRate>
+                <fertilizerUsage>
+                    <nitrogen amount="0.018"/>
+                </fertilizerUsage>
+                <mapping group="FERTILIZER" isLiquid="true"/>
+            </sprayType>
+        </sprayTypes>
+    </thPFConfig>
+
+    <extraSourceFiles>
+        <sourceFile filename="scripts/VtszNutrients.lua"/>
+    </extraSourceFiles>
+    <specializations>
+        <specialization name="vtszSprayer" className="VtszSprayer" filename="scripts/VtszSprayer.lua"/>
+    </specializations>
+    <actions>
+        <action name="VTSZ_RATE_INCREASE" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="VTSZ_RATE_DECREASE" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="VTSZ_MINIMAP_LAYER" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="VTSZ_AUTO_TOGGLE" category="VEHICLE" ignoreComboMask="false"/>
+        <action name="VTSZ_AUTO_BASE" category="VEHICLE" ignoreComboMask="false"/>
+    </actions>
+    <inputBinding>
+        <actionBinding action="VTSZ_RATE_INCREASE">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_k" neutralInput="0" index="1"/>
+        </actionBinding>
+        <actionBinding action="VTSZ_RATE_DECREASE">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_m" neutralInput="0" index="1"/>
+        </actionBinding>
+        <actionBinding action="VTSZ_MINIMAP_LAYER">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_period" neutralInput="0" index="1"/>
+        </actionBinding>
+        <actionBinding action="VTSZ_AUTO_TOGGLE">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_comma" neutralInput="0" index="1"/>
+        </actionBinding>
+        <actionBinding action="VTSZ_AUTO_BASE">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_b" neutralInput="0" index="1"/>
+        </actionBinding>
+    </inputBinding>
+
+    <!-- In-game help (ESC > Help). The paragraphs of the page are built at runtime by scripts/VtszHelp.lua from the map's data. -->
+    <helpLines>
+        <category title="$l10n_vtsz_help_header" id="vtsz">
+            <page title="$l10n_vtsz_help_cropReq" id="cropRequirements" iconSliceId="vtszHelp.cropReq">
+                <paragraph>
+                    <text text="$l10n_vtsz_help_cropReq_intro_static"/>
+                </paragraph>
+            </page>
+            <page title="$l10n_vtsz_help_fert" id="fertilizerContent" iconSliceId="vtszHelp.cropReq">
+                <paragraph>
+                    <text text="$l10n_vtsz_help_cropReq_intro_static"/>
+                </paragraph>
+            </page>
+            <page title="$l10n_vtsz_help_guide" id="usingFertilizers" iconSliceId="vtszHelp.cropReq">
+                <paragraph>
+                    <title text="$l10n_vtsz_help_guide_order_t"/>
+                    <text text="$l10n_vtsz_help_guide_order"/>
+                </paragraph>
+                <paragraph>
+                    <title text="$l10n_vtsz_help_guide_rates_t"/>
+                    <text text="$l10n_vtsz_help_guide_rates"/>
+                </paragraph>
+                <paragraph>
+                    <title text="$l10n_vtsz_help_guide_nitrogen_t"/>
+                    <text text="$l10n_vtsz_help_guide_nitrogen"/>
+                </paragraph>
+                <paragraph>
+                    <title text="$l10n_vtsz_help_guide_phosphorus_t"/>
+                    <text text="$l10n_vtsz_help_guide_phosphorus"/>
+                </paragraph>
+                <paragraph>
+                    <title text="$l10n_vtsz_help_guide_potassium_t"/>
+                    <text text="$l10n_vtsz_help_guide_potassium"/>
+                </paragraph>
+                <paragraph>
+                    <title text="$l10n_vtsz_help_guide_npk_t"/>
+                    <text text="$l10n_vtsz_help_guide_npk"/>
+                </paragraph>
+                <paragraph>
+                    <title text="$l10n_vtsz_help_guide_organic_t"/>
+                    <text text="$l10n_vtsz_help_guide_organic"/>
+                </paragraph>
+                <paragraph>
+                    <title text="$l10n_vtsz_help_guide_lime_t"/>
+                    <text text="$l10n_vtsz_help_guide_lime"/>
+                </paragraph>
+                <paragraph>
+                    <title text="$l10n_vtsz_help_guide_calA_t"/>
+                    <text text="$l10n_vtsz_help_guide_calA"/>
+                </paragraph>
+                <paragraph>
+                    <title text="$l10n_vtsz_help_guide_calB_t"/>
+                    <text text="$l10n_vtsz_help_guide_calB"/>
+                </paragraph>
+                <paragraph>
+                    <title text="$l10n_vtsz_help_guide_cropCereal_t"/>
+                    <text text="$l10n_vtsz_help_guide_cropCereal"/>
+                </paragraph>
+                <paragraph>
+                    <title text="$l10n_vtsz_help_guide_cropMaize_t"/>
+                    <text text="$l10n_vtsz_help_guide_cropMaize"/>
+                </paragraph>
+                <paragraph>
+                    <title text="$l10n_vtsz_help_guide_cropBeet_t"/>
+                    <text text="$l10n_vtsz_help_guide_cropBeet"/>
+                </paragraph>
+                <paragraph>
+                    <title text="$l10n_vtsz_help_guide_cropLegume_t"/>
+                    <text text="$l10n_vtsz_help_guide_cropLegume"/>
+                </paragraph>
+                <paragraph>
+                    <title text="$l10n_vtsz_help_guide_rulesA_t"/>
+                    <text text="$l10n_vtsz_help_guide_rulesA"/>
+                </paragraph>
+                <paragraph>
+                    <title text="$l10n_vtsz_help_guide_rulesB_t"/>
+                    <text text="$l10n_vtsz_help_guide_rulesB"/>
+                </paragraph>
+                <paragraph>
+                    <title text="$l10n_vtsz_help_guide_rulesC_t"/>
+                    <text text="$l10n_vtsz_help_guide_rulesC"/>
+                </paragraph>
+                <paragraph>
+                    <title text="$l10n_vtsz_help_guide_houseA_t"/>
+                    <text text="$l10n_vtsz_help_guide_houseA"/>
+                </paragraph>
+                <paragraph>
+                    <title text="$l10n_vtsz_help_guide_houseB_t"/>
+                    <text text="$l10n_vtsz_help_guide_houseB"/>
+                </paragraph>
+            </page>
+        </category>
+    </helpLines>
+</modDesc>

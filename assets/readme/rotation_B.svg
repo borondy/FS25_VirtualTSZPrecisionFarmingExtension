@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 830" width="940" font-family="Segoe UI, Arial, sans-serif" font-size="12">
+<rect width="940" height="830" fill="#ffffff"/>
+<text x="62" y="22" font-size="15" font-weight="600" fill="#1a1a1a">B. forgó: kukorica / búza / napraforgó / árpa (műtrágya, szalma lehordva)</text>
+<rect x="106.9" y="38" width="123.9" height="22" fill="#cfe3f7"/>
+<text x="168.9" y="53" text-anchor="middle" font-size="10" fill="#1a1a1a">szemes kukorica</text>
+<rect x="277.5" y="38" width="131.1" height="22" fill="#fbe0b3"/>
+<text x="343.0" y="53" text-anchor="middle" font-size="10" fill="#1a1a1a">őszi búza</text>
+<rect x="442.7" y="38" width="149.1" height="22" fill="#cfe3f7"/>
+<text x="517.2" y="53" text-anchor="middle" font-size="10" fill="#1a1a1a">napraforgó</text>
+<rect x="654.6" y="38" width="161.6" height="22" fill="#fbe0b3"/>
+<text x="735.4" y="53" text-anchor="middle" font-size="10" fill="#1a1a1a">őszi árpa</text>
+<rect x="106.9" y="62" width="123.9" height="150" fill="#e8f1fb" opacity="0.6"/>
+<rect x="277.5" y="62" width="131.1" height="150" fill="#fdf1de" opacity="0.6"/>
+<rect x="442.7" y="62" width="149.1" height="150" fill="#e8f1fb" opacity="0.6"/>
+<rect x="654.6" y="62" width="161.6" height="150" fill="#fdf1de" opacity="0.6"/>
+<rect x="62" y="62" width="862" height="150" fill="none" stroke="#c8c8c8"/>
+<line x1="62" x2="924" y1="212.0" y2="212.0" stroke="#e2e2e2"/>
+<text x="56" y="216.0" text-anchor="end" fill="#555">2</text>
+<line x1="62" x2="924" y1="174.5" y2="174.5" stroke="#e2e2e2"/>
+<text x="56" y="178.5" text-anchor="end" fill="#555">63</text>
+<line x1="62" x2="924" y1="137.0" y2="137.0" stroke="#e2e2e2"/>
+<text x="56" y="141.0" text-anchor="end" fill="#555">125</text>
+<line x1="62" x2="924" y1="99.5" y2="99.5" stroke="#e2e2e2"/>
+<text x="56" y="103.5" text-anchor="end" fill="#555">187</text>
+<line x1="62" x2="924" y1="62.0" y2="62.0" stroke="#e2e2e2"/>
+<text x="56" y="66.0" text-anchor="end" fill="#555">248</text>
+<text x="14" y="137" transform="rotate(-90 14 137)" text-anchor="middle" fill="#333">N (kg/ha)</text>
+<polyline fill="none" stroke="#1f4e79" stroke-width="2" points="62.0,188.6 109.5,188.6 109.5,174.2 110.7,174.2 110.7,174.2 121.7,174.2 121.7,99.5 154.7,99.5 154.7,79.3 229.4,79.3 229.4,194.7 340.1,194.7 340.1,128.3 355.1,128.3 355.1,79.3 389.9,79.3 389.9,188.6 406.1,188.6 406.1,186.3 406.7,186.3 406.7,186.3 549.8,186.3 549.8,150.4 558.5,150.4 558.5,117.6 645.4,117.6 645.4,177.2 655.2,177.2 655.2,176.0 765.3,176.0 765.3,155.5 776.9,155.5 776.9,97.5 812.8,97.5 812.8,190.9 837.1,190.9 837.1,186.2 837.7,186.2 837.7,186.2 924.0,186.2"/>
+<polygon points="105.5,182.2 113.5,182.2 109.5,175.2" fill="#1e8449"/>
+<polygon points="117.7,107.5 125.7,107.5 121.7,100.5" fill="#1e8449"/>
+<polygon points="150.7,87.3 158.7,87.3 154.7,80.3" fill="#1e8449"/>
+<polygon points="225.4,186.7 233.4,186.7 229.4,193.7" fill="#b9770e"/>
+<polygon points="336.1,136.3 344.1,136.3 340.1,129.3" fill="#1e8449"/>
+<polygon points="351.1,87.3 359.1,87.3 355.1,80.3" fill="#1e8449"/>
+<polygon points="385.9,180.6 393.9,180.6 389.9,187.6" fill="#b9770e"/>
+<polygon points="545.8,158.4 553.8,158.4 549.8,151.4" fill="#1e8449"/>
+<polygon points="554.5,125.6 562.5,125.6 558.5,118.6" fill="#1e8449"/>
+<polygon points="641.4,169.2 649.4,169.2 645.4,176.2" fill="#b9770e"/>
+<polygon points="761.3,163.5 769.3,163.5 765.3,156.5" fill="#1e8449"/>
+<polygon points="772.9,105.5 780.9,105.5 776.9,98.5" fill="#1e8449"/>
+<polygon points="808.8,182.9 816.8,182.9 812.8,189.9" fill="#b9770e"/>
+<rect x="106.9" y="246" width="123.9" height="150" fill="#e8f1fb" opacity="0.6"/>
+<rect x="277.5" y="246" width="131.1" height="150" fill="#fdf1de" opacity="0.6"/>
+<rect x="442.7" y="246" width="149.1" height="150" fill="#e8f1fb" opacity="0.6"/>
+<rect x="654.6" y="246" width="161.6" height="150" fill="#fdf1de" opacity="0.6"/>
+<rect x="62" y="246" width="862" height="150" fill="none" stroke="#c8c8c8"/>
+<line x1="62" x2="924" y1="396.0" y2="396.0" stroke="#e2e2e2"/>
+<text x="56" y="400.0" text-anchor="end" fill="#555">493</text>
+<line x1="62" x2="924" y1="358.5" y2="358.5" stroke="#e2e2e2"/>
+<text x="56" y="362.5" text-anchor="end" fill="#555">546</text>
+<line x1="62" x2="924" y1="321.0" y2="321.0" stroke="#e2e2e2"/>
+<text x="56" y="325.0" text-anchor="end" fill="#555">599</text>
+<line x1="62" x2="924" y1="283.5" y2="283.5" stroke="#e2e2e2"/>
+<text x="56" y="287.5" text-anchor="end" fill="#555">652</text>
+<line x1="62" x2="924" y1="246.0" y2="246.0" stroke="#e2e2e2"/>
+<text x="56" y="250.0" text-anchor="end" fill="#555">706</text>
+<text x="14" y="321" transform="rotate(-90 14 321)" text-anchor="middle" fill="#333">P₂O₅ (kg/ha)</text>
+<line x1="62" x2="924" y1="320.4" y2="320.4" stroke="#c0392b" stroke-dasharray="6 4" stroke-width="1.5"/>
+<text x="920" y="316.4" text-anchor="end" fill="#c0392b" font-size="11">cél 600</text>
+<polyline fill="none" stroke="#1f4e79" stroke-width="2" points="62.0,346.8 109.5,346.8 109.5,276.4 110.7,276.4 110.7,276.4 121.7,276.4 121.7,276.4 154.7,276.4 154.7,276.4 229.4,276.4 229.4,320.2 340.1,320.2 340.1,320.2 355.1,320.2 355.1,320.2 389.9,320.2 389.9,378.7 406.1,378.7 406.1,296.6 406.7,296.6 406.7,296.6 549.8,296.6 549.8,263.3 558.5,263.3 558.5,263.3 645.4,263.3 645.4,302.8 655.2,302.8 655.2,302.8 765.3,302.8 765.3,302.8 776.9,302.8 776.9,302.8 812.8,302.8 812.8,352.9 837.1,352.9 837.1,312.9 837.7,312.9 837.7,312.9 924.0,312.9"/>
+<polygon points="105.5,284.4 113.5,284.4 109.5,277.4" fill="#1e8449"/>
+<polygon points="225.4,312.2 233.4,312.2 229.4,319.2" fill="#b9770e"/>
+<polygon points="385.9,370.7 393.9,370.7 389.9,377.7" fill="#b9770e"/>
+<polygon points="402.1,304.6 410.1,304.6 406.1,297.6" fill="#1e8449"/>
+<polygon points="545.8,271.3 553.8,271.3 549.8,264.3" fill="#1e8449"/>
+<polygon points="641.4,294.8 649.4,294.8 645.4,301.8" fill="#b9770e"/>
+<polygon points="808.8,344.9 816.8,344.9 812.8,351.9" fill="#b9770e"/>
+<polygon points="833.1,320.9 841.1,320.9 837.1,313.9" fill="#1e8449"/>
+<rect x="106.9" y="430" width="123.9" height="150" fill="#e8f1fb" opacity="0.6"/>
+<rect x="277.5" y="430" width="131.1" height="150" fill="#fdf1de" opacity="0.6"/>
+<rect x="442.7" y="430" width="149.1" height="150" fill="#e8f1fb" opacity="0.6"/>
+<rect x="654.6" y="430" width="161.6" height="150" fill="#fdf1de" opacity="0.6"/>
+<rect x="62" y="430" width="862" height="150" fill="none" stroke="#c8c8c8"/>
+<line x1="62" x2="924" y1="580.0" y2="580.0" stroke="#e2e2e2"/>
+<text x="56" y="584.0" text-anchor="end" fill="#555">641</text>
+<line x1="62" x2="924" y1="542.5" y2="542.5" stroke="#e2e2e2"/>
+<text x="56" y="546.5" text-anchor="end" fill="#555">717</text>
+<line x1="62" x2="924" y1="505.0" y2="505.0" stroke="#e2e2e2"/>
+<text x="56" y="509.0" text-anchor="end" fill="#555">794</text>
+<line x1="62" x2="924" y1="467.5" y2="467.5" stroke="#e2e2e2"/>
+<text x="56" y="471.5" text-anchor="end" fill="#555">870</text>
+<line x1="62" x2="924" y1="430.0" y2="430.0" stroke="#e2e2e2"/>
+<text x="56" y="434.0" text-anchor="end" fill="#555">947</text>
+<text x="14" y="505" transform="rotate(-90 14 505)" text-anchor="middle" fill="#333">K₂O (kg/ha)</text>
+<line x1="62" x2="924" y1="531.3" y2="531.3" stroke="#c0392b" stroke-dasharray="6 4" stroke-width="1.5"/>
+<text x="920" y="527.3" text-anchor="end" fill="#c0392b" font-size="11">cél 740</text>
+<polyline fill="none" stroke="#1f4e79" stroke-width="2" points="62.0,550.9 109.5,550.9 109.5,550.9 110.7,550.9 110.7,470.0 121.7,470.0 121.7,470.0 154.7,470.0 154.7,470.0 229.4,470.0 229.4,497.0 340.1,497.0 340.1,497.0 355.1,497.0 355.1,497.0 389.9,497.0 389.9,562.7 406.1,562.7 406.1,562.7 406.7,562.7 406.7,510.2 549.8,510.2 549.8,487.0 558.5,487.0 558.5,487.0 645.4,487.0 645.4,528.2 655.2,528.2 655.2,447.3 765.3,447.3 765.3,447.3 776.9,447.3 776.9,447.3 812.8,447.3 812.8,526.7 837.1,526.7 837.1,526.7 837.7,526.7 837.7,474.2 924.0,474.2"/>
+<polygon points="106.7,478.0 114.7,478.0 110.7,471.0" fill="#1e8449"/>
+<polygon points="225.4,489.0 233.4,489.0 229.4,496.0" fill="#b9770e"/>
+<polygon points="385.9,554.7 393.9,554.7 389.9,561.7" fill="#b9770e"/>
+<polygon points="402.7,518.2 410.7,518.2 406.7,511.2" fill="#1e8449"/>
+<polygon points="545.8,495.0 553.8,495.0 549.8,488.0" fill="#1e8449"/>
+<polygon points="641.4,520.2 649.4,520.2 645.4,527.2" fill="#b9770e"/>
+<polygon points="651.2,455.3 659.2,455.3 655.2,448.3" fill="#1e8449"/>
+<polygon points="808.8,518.7 816.8,518.7 812.8,525.7" fill="#b9770e"/>
+<polygon points="833.7,482.2 841.7,482.2 837.7,475.2" fill="#1e8449"/>
+<rect x="106.9" y="614" width="123.9" height="150" fill="#e8f1fb" opacity="0.6"/>
+<rect x="277.5" y="614" width="131.1" height="150" fill="#fdf1de" opacity="0.6"/>
+<rect x="442.7" y="614" width="149.1" height="150" fill="#e8f1fb" opacity="0.6"/>
+<rect x="654.6" y="614" width="161.6" height="150" fill="#fdf1de" opacity="0.6"/>
+<rect x="62" y="614" width="862" height="150" fill="none" stroke="#c8c8c8"/>
+<line x1="62" x2="924" y1="764.0" y2="764.0" stroke="#e2e2e2"/>
+<text x="56" y="768.0" text-anchor="end" fill="#555">2.96</text>
+<line x1="62" x2="924" y1="726.5" y2="726.5" stroke="#e2e2e2"/>
+<text x="56" y="730.5" text-anchor="end" fill="#555">3.04</text>
+<line x1="62" x2="924" y1="689.0" y2="689.0" stroke="#e2e2e2"/>
+<text x="56" y="693.0" text-anchor="end" fill="#555">3.12</text>
+<line x1="62" x2="924" y1="651.5" y2="651.5" stroke="#e2e2e2"/>
+<text x="56" y="655.5" text-anchor="end" fill="#555">3.21</text>
+<line x1="62" x2="924" y1="614.0" y2="614.0" stroke="#e2e2e2"/>
+<text x="56" y="618.0" text-anchor="end" fill="#555">3.29</text>
+<text x="14" y="689" transform="rotate(-90 14 689)" text-anchor="middle" fill="#333">Szervesanyag (%)</text>
+<line x1="62" x2="924" y1="654.9" y2="654.9" stroke="#c0392b" stroke-dasharray="6 4" stroke-width="1.5"/>
+<text x="920" y="650.9" text-anchor="end" fill="#c0392b" font-size="11">cél 3.2</text>
+<polyline fill="none" stroke="#1f4e79" stroke-width="2" points="62.0,632.4 62.0,632.4 62.0,633.0 80.0,633.0 80.0,633.6 97.9,633.6 97.9,635.5 109.5,635.5 109.5,635.5 110.7,635.5 110.7,635.5 115.9,635.5 115.9,638.4 121.7,638.4 121.7,638.4 133.8,638.4 133.8,641.9 151.8,641.9 151.8,646.0 154.7,646.0 154.7,646.0 169.8,646.0 169.8,650.7 187.7,650.7 187.7,655.5 205.7,655.5 205.7,659.3 223.6,659.3 223.6,661.8 229.4,661.8 229.4,631.3 241.6,631.3 241.6,632.9 259.5,632.9 259.5,633.5 277.5,633.5 277.5,634.2 295.5,634.2 295.5,634.8 313.4,634.8 313.4,636.7 331.4,636.7 331.4,639.5 340.1,639.5 340.1,639.5 349.3,639.5 349.3,643.0 355.1,643.0 355.1,643.0 367.3,643.0 367.3,647.1 385.2,647.1 385.2,651.9 389.9,651.9 389.9,691.7 403.2,691.7 403.2,696.4 406.1,696.4 406.1,696.4 406.7,696.4 406.7,696.4 421.2,696.4 421.2,700.2 439.1,700.2 439.1,702.7 457.1,702.7 457.1,704.3 475.0,704.3 475.0,705.0 493.0,705.0 493.0,705.6 511.0,705.6 511.0,706.2 528.9,706.2 528.9,708.1 546.9,708.1 546.9,711.0 549.8,711.0 549.8,711.0 558.5,711.0 558.5,711.0 564.8,711.0 564.8,714.5 582.8,714.5 582.8,718.6 600.8,718.6 600.8,723.3 618.7,723.3 618.7,728.1 636.7,728.1 636.7,731.9 645.4,731.9 645.4,688.4 654.6,688.4 654.6,690.9 655.2,690.9 655.2,690.9 672.6,690.9 672.6,692.5 690.5,692.5 690.5,693.1 708.5,693.1 708.5,693.8 726.5,693.8 726.5,694.4 744.4,694.4 744.4,696.3 762.4,696.3 762.4,699.2 765.3,699.2 765.3,699.2 776.9,699.2 776.9,699.2 780.3,699.2 780.3,702.6 798.3,702.6 798.3,706.8 812.8,706.8 812.8,737.2 816.2,737.2 816.2,741.9 834.2,741.9 834.2,746.7 837.1,746.7 837.1,746.7 837.7,746.7 837.7,746.7 924.0,746.7"/>
+<polygon points="225.4,623.3 233.4,623.3 229.4,630.3" fill="#b9770e"/>
+<polygon points="385.9,683.7 393.9,683.7 389.9,690.7" fill="#b9770e"/>
+<polygon points="641.4,680.4 649.4,680.4 645.4,687.4" fill="#b9770e"/>
+<polygon points="808.8,729.2 816.8,729.2 812.8,736.2" fill="#b9770e"/>
+<line x1="62.0" x2="62.0" y1="772" y2="778" stroke="#888"/>
+<text x="66.0" y="788" fill="#333">1. év</text>
+<line x1="277.5" x2="277.5" y1="772" y2="778" stroke="#888"/>
+<text x="281.5" y="788" fill="#333">2. év</text>
+<line x1="493.0" x2="493.0" y1="772" y2="778" stroke="#888"/>
+<text x="497.0" y="788" fill="#333">3. év</text>
+<line x1="708.5" x2="708.5" y1="772" y2="778" stroke="#888"/>
+<text x="712.5" y="788" fill="#333">4. év</text>
+<line x1="924.0" x2="924.0" y1="772" y2="778" stroke="#888"/>
+<polygon points="62,814 70,814 66,821" fill="#1e8449"/><text x="76" y="822" fill="#333">kijuttatás</text>
+<polygon points="162,814 170,814 166,821" fill="#b9770e"/><text x="176" y="822" fill="#333">aratás / kaszálás</text>
+<line x1="302" x2="328" y1="818" y2="818" stroke="#c0392b" stroke-dasharray="6 4" stroke-width="1.5"/><text x="334" y="822" fill="#333">célérték (Vályog, 3-as talajtípus)</text>
+</svg>

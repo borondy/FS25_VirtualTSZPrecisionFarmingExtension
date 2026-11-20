@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="bigBag" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../shared/xml/schema/vehicle.xsd">
+    <parentFile xmlFilename="$data/objects/bigBag/bigBag.xml">
+        <attributes>
+            <set path="vehicle.storeData.name" value="$l10n_vtsz_ft_NPK8_24_24"/>
+            <set path="vehicle.storeData.image" value="shop/store_NPK8_24_24.png"/>
+            <set path="vehicle.storeData.price" value="2820"/>
+            <set path="vehicle.storeData.brand" value="NONE"/>
+            <set path="vehicle.storeData.functions.function" value="$l10n_vtsz_function_bag"/>
+            <set path="vehicle.storeData.financeCategory" value="PURCHASE_FERTILIZER"/>
+
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit#fillTypes" value="NPK8_24_24"/>
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit#startFillType" value="NPK8_24_24"/>
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit#capacity" value="1000"/>
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit#startFillLevel" value="1000"/>
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit.fillTypeMaterials.material(1)#fillType" value="NPK8_24_24"/>
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit.fillTypeMaterials.material(1)#refNode" value="fertilizerHelm_mat"/>
+            <!-- own copy of the bag model, its Helm material carries our label texture (tools/generate_textures.py) -->
+            <set path="vehicle.base.filename" value="models/vtszBag_NPK8_24_24.i3d"/>
+        </attributes>
+    </parentFile>
+
+    <!-- ONLY FOR ICON GENERATION -->
+    <storeData>
+        <name>$l10n_vtsz_ft_NPK8_24_24</name>
+        <image>shop/store_NPK8_24_24.png</image>
+        <brand>NONE</brand>
+        <category>bigbags</category>
+        <storeIconRendering>
+            <settings cameraXRot="-15" cameraYRot="35"/>
+        </storeIconRendering>
+        <vertexBufferMemoryUsage>0</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>0</indexBufferMemoryUsage>
+        <textureMemoryUsage>0</textureMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+</vehicle>

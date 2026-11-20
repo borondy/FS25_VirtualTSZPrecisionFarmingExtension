@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1037" width="1200" height="1037" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="1200" height="1037" rx="18" ry="18" fill="#ffffff" stroke="#d8d2c8" stroke-width="2"/>
+<text x="56" y="52" font-size="30" font-weight="700" fill="#2b2b2b">Szerves anyag állat nélküli gazdaságban</text>
+<text x="56" y="84" font-size="21" fill="#555555">B. forgó vályogon: szemes kukorica / őszi búza / napraforgó / őszi árpa, csak műtrágya, szalma lehordva</text>
+<text x="302.5" y="617.6" font-size="20" fill="#555555" text-anchor="middle">1</text>
+<rect x="415.0" y="145.0" width="225.0" height="804.6" fill="#f6f3ee"/>
+<text x="527.5" y="617.6" font-size="20" fill="#555555" text-anchor="middle">2</text>
+<text x="752.5" y="617.6" font-size="20" fill="#555555" text-anchor="middle">3</text>
+<rect x="865.0" y="145.0" width="225.0" height="804.6" fill="#f6f3ee"/>
+<text x="977.5" y="617.6" font-size="20" fill="#555555" text-anchor="middle">4</text>
+<text x="640.0" y="643.6" font-size="19" fill="#777777" text-anchor="middle">játékév</text>
+<text x="56" y="131" font-size="19" font-weight="700" fill="#2b2b2b">Hozampotenciál az aratáskor, %</text>
+<circle cx="876.8" cy="125" r="6" fill="#9a9a9a"/>
+<text x="887.8" y="131" font-size="16" fill="#555555">nincs korlát (≥ 99,5 %)</text>
+<circle cx="741.6" cy="125" r="6" fill="#2f8f5b"/>
+<text x="752.6" y="131" font-size="16" fill="#555555">szerves anyag</text>
+<circle cx="665.2" cy="125" r="6" fill="#d98a1f"/>
+<text x="676.2" y="131" font-size="16" fill="#555555">kálium</text>
+<circle cx="580.4" cy="125" r="6" fill="#8e5ab0"/>
+<text x="591.4" y="131" font-size="16" fill="#555555">foszfor</text>
+<circle cx="487.2" cy="125" r="6" fill="#3b7dd8"/>
+<text x="498.2" y="131" font-size="16" fill="#555555">nitrogén</text>
+<line x1="190" x2="1090" y1="265.0" y2="265.0" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="271.0" font-size="18" fill="#555555" text-anchor="end">95</text>
+<line x1="190" x2="1090" y1="194.4" y2="194.4" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="200.4" font-size="18" fill="#555555" text-anchor="end">100</text>
+<line x1="190" x2="1090" y1="265" y2="265" stroke="#999999" stroke-width="2"/>
+<line x1="364.8" x2="364.8" y1="265" y2="195.5" stroke="#9a9a9a" stroke-width="3"/>
+<circle cx="364.8" cy="195.5" r="7" fill="#ffffff" stroke="#9a9a9a" stroke-width="4"/>
+<text x="364.8" y="182.5" font-size="17" font-weight="700" fill="#2b2b2b" text-anchor="middle">99,9</text>
+<line x1="532.3" x2="532.3" y1="265" y2="222.6" stroke="#3b7dd8" stroke-width="3"/>
+<circle cx="532.3" cy="222.6" r="7" fill="#ffffff" stroke="#3b7dd8" stroke-width="4"/>
+<text x="532.3" y="209.6" font-size="17" font-weight="700" fill="#2b2b2b" text-anchor="middle">98,0</text>
+<line x1="799.1" x2="799.1" y1="265" y2="225.7" stroke="#3b7dd8" stroke-width="3"/>
+<circle cx="799.1" cy="225.7" r="7" fill="#ffffff" stroke="#3b7dd8" stroke-width="4"/>
+<text x="799.1" y="212.7" font-size="17" font-weight="700" fill="#2b2b2b" text-anchor="middle">97,8</text>
+<line x1="973.9" x2="973.9" y1="265" y2="225.3" stroke="#3b7dd8" stroke-width="3"/>
+<circle cx="973.9" cy="225.3" r="7" fill="#ffffff" stroke="#3b7dd8" stroke-width="4"/>
+<text x="973.9" y="212.3" font-size="17" font-weight="700" fill="#2b2b2b" text-anchor="middle">97,8</text>
+<line x1="190" x2="1090" y1="486.7" y2="486.7" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="492.7" font-size="19" fill="#555555" text-anchor="end">3,0</text>
+<line x1="190" x2="1090" y1="426.7" y2="426.7" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="432.7" font-size="19" fill="#555555" text-anchor="end">3,2</text>
+<line x1="190" x2="1090" y1="366.7" y2="366.7" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="372.7" font-size="19" fill="#555555" text-anchor="end">3,4</text>
+<text transform="translate(128,452.3) rotate(-90)" font-size="19" fill="#777777" text-anchor="middle">szerves anyag, %</text>
+<line x1="190" x2="1090" y1="589.6" y2="589.6" stroke="#999999" stroke-width="2"/>
+<line x1="190" x2="1090" y1="426.7" y2="426.7" stroke="#8a8a8a" stroke-width="2" stroke-dasharray="9 7"/>
+<text x="1098" y="424.7" font-size="17" fill="#666666">célérték</text>
+<text x="1098" y="443.7" font-size="17" fill="#666666">3,2 %</text>
+<polyline points="190.0,411.7 190.0,411.7 190.0,412.1 208.8,412.1 208.8,412.5 227.5,412.5 227.5,413.8 239.6,413.8 239.6,413.8 240.8,413.8 240.8,413.8 246.2,413.8 246.2,415.7 252.3,415.7 252.3,415.7 265.0,415.7 265.0,418.0 283.8,418.0 283.8,420.7 286.8,420.7 286.8,420.7 302.5,420.7 302.5,423.9 321.2,423.9 321.2,427.0 340.0,427.0 340.0,429.6 358.8,429.6 358.8,431.2 364.8,431.2 364.8,411.0 377.5,411.0 377.5,412.1 396.2,412.1 396.2,412.5 415.0,412.5 415.0,412.9 433.8,412.9 433.8,413.3 452.5,413.3 452.5,414.6 471.2,414.6 471.2,416.5 480.3,416.5 480.3,416.5 490.0,416.5 490.0,418.8 496.0,418.8 496.0,418.8 508.8,418.8 508.8,421.5 527.5,421.5 527.5,424.7 532.3,424.7 532.3,451.1 546.2,451.1 546.2,454.2 549.3,454.2 549.3,454.2 549.9,454.2 549.9,454.2 565.0,454.2 565.0,456.7 583.8,456.7 583.8,458.4 602.5,458.4 602.5,459.5 621.2,459.5 621.2,459.9 640.0,459.9 640.0,460.3 658.8,460.3 658.8,460.7 677.5,460.7 677.5,462.0 696.2,462.0 696.2,463.9 699.3,463.9 699.3,463.9 708.3,463.9 708.3,463.9 715.0,463.9 715.0,466.2 733.8,466.2 733.8,468.9 752.5,468.9 752.5,472.1 771.2,472.1 771.2,475.2 790.0,475.2 790.0,477.8 799.1,477.8 799.1,448.9 808.8,448.9 808.8,450.6 809.4,450.6 809.4,450.6 827.5,450.6 827.5,451.6 846.2,451.6 846.2,452.1 865.0,452.1 865.0,452.5 883.8,452.5 883.8,452.9 902.5,452.9 902.5,454.2 921.2,454.2 921.2,456.0 924.3,456.0 924.3,456.0 936.4,456.0 936.4,456.0 940.0,456.0 940.0,458.4 958.8,458.4 958.8,461.1 973.9,461.1 973.9,481.3 977.5,481.3 977.5,484.5 996.2,484.5 996.2,487.6 999.3,487.6 999.3,487.6 999.9,487.6 999.9,487.6" fill="none" stroke="#a8641a" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="364.8" y1="419.0" x2="364.8" y2="511.6" stroke="#7a7a7a" stroke-width="1.8"/>
+<line x1="532.3" y1="459.1" x2="532.3" y2="511.6" stroke="#7a7a7a" stroke-width="1.8"/>
+<line x1="799.1" y1="456.9" x2="799.1" y2="511.6" stroke="#7a7a7a" stroke-width="1.8"/>
+<line x1="973.9" y1="489.3" x2="973.9" y2="511.6" stroke="#7a7a7a" stroke-width="1.8"/>
+<rect x="296.5" y="511.6" width="136.5" height="54" rx="8" fill="#ffffff" stroke="#c9c2b6" stroke-width="1.5"/>
+<text x="364.8" y="533.6" font-size="16" font-weight="700" fill="#2b2b2b" text-anchor="middle">szemes kukorica</text>
+<text x="364.8" y="557.6" font-size="16" fill="#2b2b2b" text-anchor="middle">aratás +0,07</text>
+<rect x="475.9" y="511.6" width="112.8" height="54" rx="8" fill="#ffffff" stroke="#c9c2b6" stroke-width="1.5"/>
+<text x="532.3" y="533.6" font-size="16" font-weight="700" fill="#2b2b2b" text-anchor="middle">őszi búza</text>
+<text x="532.3" y="557.6" font-size="16" fill="#2b2b2b" text-anchor="middle">aratás −0,09</text>
+<rect x="742.7" y="511.6" width="112.8" height="54" rx="8" fill="#ffffff" stroke="#c9c2b6" stroke-width="1.5"/>
+<text x="799.1" y="533.6" font-size="16" font-weight="700" fill="#2b2b2b" text-anchor="middle">napraforgó</text>
+<text x="799.1" y="557.6" font-size="16" fill="#2b2b2b" text-anchor="middle">aratás +0,10</text>
+<rect x="917.5" y="511.6" width="112.8" height="54" rx="8" fill="#ffffff" stroke="#c9c2b6" stroke-width="1.5"/>
+<text x="973.9" y="533.6" font-size="16" font-weight="700" fill="#2b2b2b" text-anchor="middle">őszi árpa</text>
+<text x="973.9" y="557.6" font-size="16" fill="#2b2b2b" text-anchor="middle">aratás −0,07</text>
+<circle cx="364.8" cy="411.0" r="7" fill="#ffffff" stroke="#a8641a" stroke-width="4"/>
+<circle cx="532.3" cy="451.1" r="7" fill="#ffffff" stroke="#a8641a" stroke-width="4"/>
+<circle cx="799.1" cy="448.9" r="7" fill="#ffffff" stroke="#a8641a" stroke-width="4"/>
+<circle cx="973.9" cy="481.3" r="7" fill="#ffffff" stroke="#a8641a" stroke-width="4"/>
+<circle cx="190.0" cy="411.7" r="7" fill="#ffffff" stroke="#a8641a" stroke-width="4"/>
+<circle cx="999.9" cy="487.6" r="7" fill="#ffffff" stroke="#a8641a" stroke-width="4"/>
+<rect x="202" y="319" width="204.2" height="34" rx="8" fill="#ffffff" stroke="#c9c2b6" stroke-width="1.5"/>
+<text x="214" y="342" font-size="20" font-weight="700" fill="#2b2b2b">kezdőérték 3,25 %</text>
+<line x1="190.0" y1="403.7" x2="202.0" y2="353" stroke="#7a7a7a" stroke-width="1.8"/>
+<line x1="999.9" y1="479.6" x2="999.9" y2="378" stroke="#7a7a7a" stroke-width="1.8"/>
+<rect x="774.8" y="319" width="315.2" height="59" rx="8" fill="#ffffff" stroke="#c9c2b6" stroke-width="1.5"/>
+<text x="1080" y="343" font-size="20" font-weight="700" fill="#2b2b2b" text-anchor="end">végérték 3,00 %</text>
+<text x="1080" y="368" font-size="20" fill="#2b2b2b" text-anchor="end">−0,25 %-pont 4 játékév alatt</text>
+<text x="56" y="665.6" font-size="19" font-weight="700" fill="#2b2b2b">Trágyázások (kg/ha; szilárd-, hígtrágya és fermentált ezer l/ha)</text>
+<line x1="190" x2="1090" y1="694.6" y2="694.6" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="700.6" font-size="17" fill="#555555" text-anchor="end">Pétisó 27</text>
+<text x="490.3" y="699.6" font-size="14" fill="#2b2b2b" text-anchor="start">380</text>
+<text x="718.3" y="699.6" font-size="14" fill="#2b2b2b" text-anchor="start">200</text>
+<text x="934.3" y="699.6" font-size="14" fill="#2b2b2b" text-anchor="start">100</text>
+<circle cx="480.3" cy="694.6" r="6" fill="#3b7dd8"/>
+<circle cx="708.3" cy="694.6" r="6" fill="#3b7dd8"/>
+<circle cx="924.3" cy="694.6" r="6" fill="#3b7dd8"/>
+<line x1="190" x2="1090" y1="724.6" y2="724.6" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="730.6" font-size="17" fill="#555555" text-anchor="end">Karbamid 46</text>
+<text x="262.3" y="729.6" font-size="14" fill="#2b2b2b" text-anchor="start">350</text>
+<circle cx="252.3" cy="724.6" r="6" fill="#3b7dd8"/>
+<line x1="190" x2="1090" y1="754.6" y2="754.6" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="760.6" font-size="17" fill="#555555" text-anchor="end">Nitrosol 30</text>
+<text x="296.8" y="759.6" font-size="14" fill="#2b2b2b" text-anchor="start">120</text>
+<text x="506.0" y="759.6" font-size="14" fill="#2b2b2b" text-anchor="start">240</text>
+<text x="946.4" y="759.6" font-size="14" fill="#2b2b2b" text-anchor="start">250</text>
+<circle cx="286.8" cy="754.6" r="6" fill="#3b7dd8"/>
+<circle cx="496.0" cy="754.6" r="6" fill="#3b7dd8"/>
+<circle cx="936.4" cy="754.6" r="6" fill="#3b7dd8"/>
+<line x1="190" x2="1090" y1="784.6" y2="784.6" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="790.6" font-size="17" fill="#555555" text-anchor="end">NPK 15-15-15</text>
+<text x="709.3" y="789.6" font-size="14" fill="#2b2b2b" text-anchor="start">300</text>
+<circle cx="699.3" cy="784.6" r="6" fill="#2a9d8f"/>
+<line x1="190" x2="1090" y1="814.6" y2="814.6" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="820.6" font-size="17" fill="#555555" text-anchor="end">MAP 11-52</text>
+<text x="249.6" y="819.6" font-size="14" fill="#2b2b2b" text-anchor="start">200</text>
+<circle cx="239.6" cy="814.6" r="6" fill="#8e5ab0"/>
+<line x1="190" x2="1090" y1="844.6" y2="844.6" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="850.6" font-size="17" fill="#555555" text-anchor="end">TSZF 46</text>
+<text x="559.3" y="849.6" font-size="14" fill="#2b2b2b" text-anchor="start">230</text>
+<circle cx="549.3" cy="844.6" r="6" fill="#8e5ab0"/>
+<line x1="190" x2="1090" y1="874.6" y2="874.6" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="880.6" font-size="17" fill="#555555" text-anchor="end">SZF 18</text>
+<text x="1009.3" y="879.6" font-size="14" fill="#2b2b2b" text-anchor="start">300</text>
+<circle cx="999.3" cy="874.6" r="6" fill="#8e5ab0"/>
+<line x1="190" x2="1090" y1="904.6" y2="904.6" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="910.6" font-size="17" fill="#555555" text-anchor="end">Kálisó 60</text>
+<text x="250.8" y="909.6" font-size="14" fill="#2b2b2b" text-anchor="start">250</text>
+<text x="819.4" y="909.6" font-size="14" fill="#2b2b2b" text-anchor="start">250</text>
+<circle cx="240.8" cy="904.6" r="6" fill="#d98a1f"/>
+<circle cx="809.4" cy="904.6" r="6" fill="#d98a1f"/>
+<line x1="190" x2="1090" y1="934.6" y2="934.6" stroke="#e3dfd8" stroke-width="1.5"/>
+<text x="180" y="940.6" font-size="17" fill="#555555" text-anchor="end">Patentkali</text>
+<text x="559.9" y="939.6" font-size="14" fill="#2b2b2b" text-anchor="start">300</text>
+<text x="1009.9" y="939.6" font-size="14" fill="#2b2b2b" text-anchor="start">300</text>
+<circle cx="549.9" cy="934.6" r="6" fill="#d98a1f"/>
+<circle cx="999.9" cy="934.6" r="6" fill="#d98a1f"/>
+<text x="56" y="989" font-size="17" fill="#777777">Az OM-változás játékévenként a valós éves érték 6-szorosa (timeScale 6); a szerveren 6 játékév ≈ 1 valós év. Szimuláció tipikus</text>
+<text x="56" y="1013" font-size="17" fill="#777777">hozamokkal, nem játékbeli mérés.</text>
+</svg>

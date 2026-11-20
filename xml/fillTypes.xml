@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<map>
+    <fillTypes>
+        <fillType name="PETISO27" title="$l10n_vtsz_ft_PETISO27" showOnPriceTable="true" isBulkType="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="1" maxPhysicalSurfaceAngle="15" />
+            <economy pricePerLiter="1.92" />
+            <effects>
+                <alphaClip beltAlphaScale="0.29"/>
+            </effects>
+            <image hud="$dataS/menu/hud/fillTypes/hud_fill_fertilizer.png" />
+            <pallet filename="shop/bigBag_PETISO27.xml" />
+            <textures diffuse="$data/fillPlanes/fertilizer_diffuse.png" unitSize="0.4" blendContrast="0.2" noiseScale="0.5" porosityAtZeroRoughness="0.9" porosityAtFullRoughness="1"
+                      normal="$data/fillPlanes/fertilizer_normal.png"
+                      height="$data/fillPlanes/fertilizer_height.png"
+                      displacement="$data/fillPlanes/fertilizer_displacement.png" displacementMaxHeight="0.2" firmness="0.3" viscosity="0.5"
+                      distance="$data/fillPlanes/distance/fertilizerDistance_diffuse.png" />
+        </fillType>
+
+        <fillType name="KARBAMID46" title="$l10n_vtsz_ft_KARBAMID46" showOnPriceTable="true" isBulkType="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.75" maxPhysicalSurfaceAngle="15" />
+            <economy pricePerLiter="2.15" />
+            <effects>
+                <alphaClip beltAlphaScale="0.29"/>
+            </effects>
+            <image hud="$dataS/menu/hud/fillTypes/hud_fill_fertilizer.png" />
+            <pallet filename="shop/bigBag_KARBAMID46.xml" />
+            <textures diffuse="$data/fillPlanes/fertilizer_diffuse.png" unitSize="0.4" blendContrast="0.2" noiseScale="0.5" porosityAtZeroRoughness="0.9" porosityAtFullRoughness="1"
+                      normal="$data/fillPlanes/fertilizer_normal.png"
+                      height="$data/fillPlanes/fertilizer_height.png"
+                      displacement="$data/fillPlanes/fertilizer_displacement.png" displacementMaxHeight="0.2" firmness="0.3" viscosity="0.5"
+                      distance="$data/fillPlanes/distance/fertilizerDistance_diffuse.png" />
+        </fillType>
+
+        <fillType name="MAP11_52" title="$l10n_vtsz_ft_MAP11_52" showOnPriceTable="true" isBulkType="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.96" maxPhysicalSurfaceAngle="15" />
+            <economy pricePerLiter="3.74" />
+            <effects>
+                <alphaClip beltAlphaScale="0.29"/>
+            </effects>
+            <image hud="$dataS/menu/hud/fillTypes/hud_fill_fertilizer.png" />
+            <pallet filename="shop/bigBag_MAP11_52.xml" />
+            <textures diffuse="$data/fillPlanes/fertilizer_diffuse.png" unitSize="0.4" blendContrast="0.2" noiseScale="0.5" porosityAtZeroRoughness="0.9" porosityAtFullRoughness="1"
+                      normal="$data/fillPlanes/fertilizer_normal.png"
+                      height="$data/fillPlanes/fertilizer_height.png"
+                      displacement="$data/fillPlanes/fertilizer_displacement.png" displacementMaxHeight="0.2" firmness="0.3" viscosity="0.5"
+                      distance="$data/fillPlanes/distance/fertilizerDistance_diffuse.png" />
+        </fillType>
+
+        <fillType name="TSP46" title="$l10n_vtsz_ft_TSP46" showOnPriceTable="true" isBulkType="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="1.1" maxPhysicalSurfaceAngle="15" />
+            <economy pricePerLiter="3.42" />
+            <effects>
+                <alphaClip beltAlphaScale="0.29"/>
+            </effects>
+            <image hud="$dataS/menu/hud/fillTypes/hud_fill_fertilizer.png" />
+            <pallet filename="shop/bigBag_TSP46.xml" />
+            <textures diffuse="$data/fillPlanes/fertilizer_diffuse.png" unitSize="0.4" blendContrast="0.2" noiseScale="0.5" porosityAtZeroRoughness="0.9" porosityAtFullRoughness="1"
+                      normal="$data/fillPlanes/fertilizer_normal.png"
+                      height="$data/fillPlanes/fertilizer_height.png"
+                      displacement="$data/fillPlanes/fertilizer_displacement.png" displacementMaxHeight="0.2" firmness="0.3" viscosity="0.5"
+                      distance="$data/fillPlanes/distance/fertilizerDistance_diffuse.png" />
+        </fillType>
+
+        <fillType name="SSP18" title="$l10n_vtsz_ft_SSP18" showOnPriceTable="true" isBulkType="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="1.05" maxPhysicalSurfaceAngle="15" />
+            <economy pricePerLiter="1.25" />
+            <effects>
+                <alphaClip beltAlphaScale="0.29"/>
+            </effects>
+            <image hud="$dataS/menu/hud/fillTypes/hud_fill_fertilizer.png" />
+            <pallet filename="shop/bigBag_SSP18.xml" />
+            <textures diffuse="$data/fillPlanes/fertilizer_diffuse.png" unitSize="0.4" blendContrast="0.2" noiseScale="0.5" porosityAtZeroRoughness="0.9" porosityAtFullRoughness="1"
+                      normal="$data/fillPlanes/fertilizer_normal.png"
+                      height="$data/fillPlanes/fertilizer_height.png"
+                      displacement="$data/fillPlanes/fertilizer_displacement.png" displacementMaxHeight="0.2" firmness="0.3" viscosity="0.5"
+                      distance="$data/fillPlanes/distance/fertilizerDistance_diffuse.png" />
+        </fillType>
+
+        <fillType name="KALISO60" title="$l10n_vtsz_ft_KALISO60" showOnPriceTable="true" isBulkType="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="1.1" maxPhysicalSurfaceAngle="15" />
+            <economy pricePerLiter="2.29" />
+            <effects>
+                <alphaClip beltAlphaScale="0.29"/>
+            </effects>
+            <image hud="$dataS/menu/hud/fillTypes/hud_fill_fertilizer.png" />
+            <pallet filename="shop/bigBag_KALISO60.xml" />
+            <textures diffuse="$data/fillPlanes/fertilizer_diffuse.png" unitSize="0.4" blendContrast="0.2" noiseScale="0.5" porosityAtZeroRoughness="0.9" porosityAtFullRoughness="1"
+                      normal="$data/fillPlanes/fertilizer_normal.png"
+                      height="$data/fillPlanes/fertilizer_height.png"
+                      displacement="$data/fillPlanes/fertilizer_displacement.png" displacementMaxHeight="0.2" firmness="0.3" viscosity="0.5"
+                      distance="$data/fillPlanes/distance/fertilizerDistance_diffuse.png" />
+        </fillType>
+
+        <fillType name="PATENTKALI" title="$l10n_vtsz_ft_PATENTKALI" showOnPriceTable="true" isBulkType="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="1.19" maxPhysicalSurfaceAngle="15" />
+            <economy pricePerLiter="2.98" />
+            <effects>
+                <alphaClip beltAlphaScale="0.29"/>
+            </effects>
+            <image hud="$dataS/menu/hud/fillTypes/hud_fill_fertilizer.png" />
+            <pallet filename="shop/bigBag_PATENTKALI.xml" />
+            <textures diffuse="$data/fillPlanes/fertilizer_diffuse.png" unitSize="0.4" blendContrast="0.2" noiseScale="0.5" porosityAtZeroRoughness="0.9" porosityAtFullRoughness="1"
+                      normal="$data/fillPlanes/fertilizer_normal.png"
+                      height="$data/fillPlanes/fertilizer_height.png"
+                      displacement="$data/fillPlanes/fertilizer_displacement.png" displacementMaxHeight="0.2" firmness="0.3" viscosity="0.5"
+                      distance="$data/fillPlanes/distance/fertilizerDistance_diffuse.png" />
+        </fillType>
+
+        <fillType name="NPK15_15_15" title="$l10n_vtsz_ft_NPK15_15_15" showOnPriceTable="true" isBulkType="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="1.05" maxPhysicalSurfaceAngle="15" />
+            <economy pricePerLiter="2.63" />
+            <effects>
+                <alphaClip beltAlphaScale="0.29"/>
+            </effects>
+            <image hud="$dataS/menu/hud/fillTypes/hud_fill_fertilizer.png" />
+            <pallet filename="shop/bigBag_NPK15_15_15.xml" />
+            <textures diffuse="$data/fillPlanes/fertilizer_diffuse.png" unitSize="0.4" blendContrast="0.2" noiseScale="0.5" porosityAtZeroRoughness="0.9" porosityAtFullRoughness="1"
+                      normal="$data/fillPlanes/fertilizer_normal.png"
+                      height="$data/fillPlanes/fertilizer_height.png"
+                      displacement="$data/fillPlanes/fertilizer_displacement.png" displacementMaxHeight="0.2" firmness="0.3" viscosity="0.5"
+                      distance="$data/fillPlanes/distance/fertilizerDistance_diffuse.png" />
+        </fillType>
+
+        <fillType name="NPK8_24_24" title="$l10n_vtsz_ft_NPK8_24_24" showOnPriceTable="true" isBulkType="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="1.05" maxPhysicalSurfaceAngle="15" />
+            <economy pricePerLiter="2.82" />
+            <effects>
+                <alphaClip beltAlphaScale="0.29"/>
+            </effects>
+            <image hud="$dataS/menu/hud/fillTypes/hud_fill_fertilizer.png" />
+            <pallet filename="shop/bigBag_NPK8_24_24.xml" />
+            <textures diffuse="$data/fillPlanes/fertilizer_diffuse.png" unitSize="0.4" blendContrast="0.2" noiseScale="0.5" porosityAtZeroRoughness="0.9" porosityAtFullRoughness="1"
+                      normal="$data/fillPlanes/fertilizer_normal.png"
+                      height="$data/fillPlanes/fertilizer_height.png"
+                      displacement="$data/fillPlanes/fertilizer_displacement.png" displacementMaxHeight="0.2" firmness="0.3" viscosity="0.5"
+                      distance="$data/fillPlanes/distance/fertilizerDistance_diffuse.png" />
+        </fillType>
+
+        <fillType name="NITROSOL30" title="$l10n_vtsz_ft_NITROSOL30" showOnPriceTable="true" isBulkType="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="1.275" maxPhysicalSurfaceAngle="0" />
+            <economy pricePerLiter="1.267" />
+            <image hud="$dataS/menu/hud/fillTypes/hud_fill_liquidFertilizer.png" />
+            <pallet filename="shop/ibc_NITROSOL30.xml" />
+        </fillType>
+
+        <fillType name="ELESZTOVINASZ" title="$l10n_vtsz_ft_ELESZTOVINASZ" showOnPriceTable="true" isBulkType="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="1.26" maxPhysicalSurfaceAngle="0" />
+            <economy pricePerLiter="0.453" />
+            <image hud="$dataS/menu/hud/fillTypes/hud_fill_liquidFertilizer.png" />
+            <pallet filename="shop/ibc_ELESZTOVINASZ.xml" />
+        </fillType>
+
+    </fillTypes>
+
+    <fillTypeCategories>
+        <!-- vanilla categories: solids behave like FERTILIZER (spreaders, bulk storage, shovels), liquids like LIQUIDFERTILIZER (sprayers) -->
+        <fillTypeCategory name="SPREADER">PETISO27 KARBAMID46 MAP11_52 TSP46 SSP18 KALISO60 PATENTKALI NPK15_15_15 NPK8_24_24</fillTypeCategory>
+        <fillTypeCategory name="BULK">PETISO27 KARBAMID46 MAP11_52 TSP46 SSP18 KALISO60 PATENTKALI NPK15_15_15 NPK8_24_24</fillTypeCategory>
+        <fillTypeCategory name="SHOVEL">PETISO27 KARBAMID46 MAP11_52 TSP46 SSP18 KALISO60 PATENTKALI NPK15_15_15 NPK8_24_24</fillTypeCategory>
+        <fillTypeCategory name="AUGERWAGON">PETISO27 KARBAMID46 MAP11_52 TSP46 SSP18 KALISO60 PATENTKALI NPK15_15_15 NPK8_24_24</fillTypeCategory>
+        <fillTypeCategory name="LOADINGVEHICLE">PETISO27 KARBAMID46 MAP11_52 TSP46 SSP18 KALISO60 PATENTKALI NPK15_15_15 NPK8_24_24</fillTypeCategory>
+        <fillTypeCategory name="SPRAYER">NITROSOL30 ELESZTOVINASZ</fillTypeCategory>
+    </fillTypeCategories>
+</map>

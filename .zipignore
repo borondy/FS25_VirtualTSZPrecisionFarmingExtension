@@ -1,0 +1,9 @@
+# Not part of the game mod (same list as the directory excludes in deploy.ps1)
+assets
+.claude
+tools
+TODOs
+tests
+docs
+.deploy-target
+CLAUDE.local.md

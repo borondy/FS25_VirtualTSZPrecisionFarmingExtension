@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--
+    Defaults for the P2O5, K2O and organic matter (OM) maps. A map can override any part in its map.xml
+    under <map><vtszNutrients> ... with the same structure (entries with the same id / name / soilTypeIndex are replaced).
+
+    All amounts are in the unit of the nutrient map: kg/ha for P and K, percent points for OM.
+    All numbers are STARTING VALUES (sources: README, section "Források"). Values marked E are estimates.
+
+    fillType value: map units gained per 1000 liters of product (FS fill type liters, as in the game) applied per ha.
+    P and K: kg nutrient per 1000 l of product. OM: percent points per 1000 l per ha.
+    Convert from per-tonne data with the fill type density (t per 1000 l: MANURE 0.7, LIQUIDMANURE 0.9, FERTILIZER 0.8, LIME / CARBOLIME 1.2).
+    fruitRequirement removal: map units removed by a harvest of the main product at a typical yield,
+    removalStraw: extra removal when the straw leaves the field (not chopped).
+-->
+<vtszNutrients>
+    <!-- Automatic P / K application rate: rate = the gap to the target the field info shows (crop target, pH included), per base
+         nutrient of the product. No build-up, no harvest removal. The rateControl max of the product still limits big deficits to
+         several passes. maxLitersPerHa caps the rate. -->
+    <autoRate maxLitersPerHa="2500"/>
+
+    <!-- yieldReference: PF yield multiplier that counts as the typical yield the removal values are for (PF multiplier range
+         about 1.0 poor .. 2.0 best). P, K and OM changes per harvest scale with multiplier / yieldReference, limited to 0.3..2.0.
+         Set 0 to switch yield scaling off (fixed change per harvest). Per nutrient map: yieldScaling 1 = full, OM 0.5 = half. -->
+    <balance inputScale="1" removalScale="1" yieldReference="1.5"/>
+    <!-- Base-game FERTILIZER (NPK 15-15-x) adds its P and K values below only when enabled. Default off: FERTILIZER is N only (as in
+         Precision Farming) and the shop products are the P / K source. A map can set it in its map.xml <vtszNutrients>. -->
+    <baseFertilizer enabled="false"/>
+    <!-- Fruit types that raise OM when destroyed (ploughed in). The map.xml coverCropBonus list wins when present. -->
+    <catchCrops fruitTypes="OILSEEDRADISH MUSTARD HUMUSACTIVE FLOWERINGCATCHCROP"/>
+
+    <!-- Minimap layer while spreading: by default the nutrient (N, P2O5, K2O) with the largest content per 1000 l of the product.
+         Organic fertilizers show N. map: N / P / K / OM -->
+    <minimap>
+        <product fillType="MANURE" map="N"/>
+        <product fillType="LIQUIDMANURE" map="N"/>
+        <product fillType="DIGESTATE" map="N"/>
+    </minimap>
+
+    <!-- Default base nutrient of the automatic rate per product (N / P / K). Without an entry the nutrient with the largest content per
+         1000 l is the default. Organic fertilizers default to N as in Precision Farming (slurry would otherwise default to K: N 4.0 < K 5.0). -->
+    <autoBaseDefault>
+        <product fillType="MANURE" base="N"/>
+        <product fillType="LIQUIDMANURE" base="N"/>
+        <product fillType="DIGESTATE" base="N"/>
+    </autoBaseDefault>
+
+    <!-- Own application rate (l/ha, keys of Precision Farming) for products with no nitrogen. 250 kg/ha / density. -->
+    <rateControl>
+        <product fillType="TSP46" default="230" step="25" min="10" max="800"/>
+        <product fillType="SSP18" default="240" step="25" min="10" max="800"/>
+        <!-- KALISO60 is KCl: max 450 l/ha = about 495 kg product = 297 kg K2O = about 230 kg Cl per pass (ESTIMATE). Sources: chloride sensitive crops (potato,
+             vegetables) should stay below 675 kg Cl/ha and season, typical crops show no harm up to about 140 kg Cl/ha (APNI / K+S notes), field data for potato
+             give safe KCl rates of 115-237 kg/ha. No source gives a hard single-dose limit; 450 l/ha is a lenient cap, split larger needs or use Patentkali. -->
+        <product fillType="KALISO60" default="230" step="25" min="10" max="450"/>
+        <product fillType="PATENTKALI" default="210" step="25" min="10" max="800"/>
+    </rateControl>
+
+    <nutrientMaps>
+        <!-- Phosphorus, kg P2O5/ha, RELATIVE to the soil type target (like OM): the map stores the distance to the target,
+             unit = (level - levelOffset) x step. 8 bit, step 5, levelOffset 120: -600 .. +675, 0 = on target on every soil type, so the
+             overlay shows deficit (minus) and surplus (plus) instead of absolute values. The crop need (pH, targetScale) is shown in the
+             field info, not on the map. maxUnits: soft cap of spreading at +300 (more is wasted; loam at pH 5.0 needs +257, keep it above +260).
+             No targetRemovalShare (default 0): P critical levels hardly differ between crops, so the target is crop independent. -->
+
+        <nutrientMap id="P" numChannels="8" step="5" levelOffset="120" maxUnits="300" unitFormat="%+d kg/ha P2O5" legendMin="-300" legendMax="100" strawChopperGain="0" catchCropGain="0">
+            <!-- 4 start values for the 4 noise values as distance to the target in kg/ha (deltas). Derived from AL-P2O5 mg/kg x 4 (E),
+                 worst start -150 (yield factor about 0.91) -->
+            <initialValues>
+                <initialValue soilTypeIndex="1" deltas="-95 -45 5 55"/>
+                <initialValue soilTypeIndex="2" deltas="-125 -50 0 50"/>
+                <initialValue soilTypeIndex="3" deltas="-150 -75 0 75"/>
+                <initialValue soilTypeIndex="4" deltas="-135 -60 15 65"/>
+            </initialValues>
+            <targets>
+                <target soilTypeIndex="1" value="420"/>
+                <target soilTypeIndex="2" value="500"/>
+                <target soilTypeIndex="3" value="600"/>
+                <target soilTypeIndex="4" value="460"/>
+            </targets>
+            <!-- Share of the stored P that plants can use at the soil pH of the PF pH map (ESTIMATE, no sourced percentages):
+                 optimum 6.2-7.2; acid soil binds P to Al/Fe, above pH 7 and with CaCO3 it is bound as Ca-phosphate (Fuleky,
+                 Hungarian soils; review of calcareous soils: optimum 6.5-7.5). The target is divided by this share, so
+                 off-optimum soils need a larger stock. Remove the block to switch it off. -->
+            <phEfficiency>
+                <key ph="5.0" value="0.70"/>
+                <key ph="5.5" value="0.85"/>
+                <key ph="6.2" value="1.00"/>
+                <key ph="7.2" value="1.00"/>
+                <key ph="7.8" value="0.90"/>
+                <key ph="8.2" value="0.80"/>
+            </phEfficiency>
+            <yieldMappings>
+                <!-- floor 0.65 (long-term trials without P/K lose 20-40 %, the server runs 3-5x faster than reality) -->
+                <yieldMapping difference="-600" yieldFactor="0.65"/>
+                <yieldMapping difference="-300" yieldFactor="0.80"/>
+                <yieldMapping difference="-200" yieldFactor="0.87"/>
+                <yieldMapping difference="-100" yieldFactor="0.95"/>
+                <yieldMapping difference="0" yieldFactor="1.00"/>
+            </yieldMappings>
+            <fruitRequirements>
+                <fruitRequirement fruitTypeName="DEFAULT" targetScale="1" removal="50" removalStraw="12"/>
+                <fruitRequirement fruitTypeName="WHEAT" removal="64" removalStraw="19"/>
+                <fruitRequirement fruitTypeName="WINTERWHEAT" removal="64" removalStraw="19"/>
+                <fruitRequirement fruitTypeName="BARLEY" removal="56" removalStraw="15"/>
+                <fruitRequirement fruitTypeName="WINTERBARLEY" removal="56" removalStraw="15"/>
+                <fruitRequirement fruitTypeName="OAT" removal="44" removalStraw="13"/>
+                <fruitRequirement fruitTypeName="RYE" removal="48" removalStraw="14"/>
+                <fruitRequirement fruitTypeName="TRITICALE" removal="52" removalStraw="16"/>
+                <fruitRequirement fruitTypeName="SPELT" removal="40" removalStraw="12"/>
+                <fruitRequirement fruitTypeName="MAIZE" removal="62" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="SILAGEMAIZE" removal="65" removalStraw="0"/>
+                <!-- SORGHUM (E): silage maize 65 x ~0.85 (sorghum silage DM yield ~12 vs ~14 t DM/ha). Cross-check: Embrapa maize/sorghum silage balance ~5.2 kg P2O5 per t DM x 12 t DM = 62. No sorghum-specific per-t-fresh source found. -->
+                <fruitRequirement fruitTypeName="SORGHUM" removal="55" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="GREENRYE" removal="40" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="VETCHRYE" removal="45" removalStraw="0"/>
+                <!-- CANOLA: the straw cannot be baled in the game, it always stays on the field, so removalStraw is 0 (P and K) -->
+                <fruitRequirement fruitTypeName="CANOLA" removal="55" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="SUNFLOWER" removal="56" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="SUGARBEET" removal="70" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="POTATO" removal="56" removalStraw="0"/>
+                <!-- SOYBEAN 3 t/ha: IPNI/Ohio State 29-39 kg P2O5/ha, LfL 15 kg/t = 45 -->
+                <fruitRequirement fruitTypeName="SOYBEAN" removal="42" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="PEA" removal="44" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="FODDERPEA" removal="44" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="FABABEAN" removal="44" removalStraw="0"/>
+                <!-- per cut, 3 cuts a year (server practice). GRASS: LfL Basisdaten 2025 table 2, >= 3 cuts: 0.81 kg P2O5/dt DM x 80 dt DM/ha / 3 cuts = 22.
+                     ALFALFA / CLOVER: about 6 kg P2O5/t hay x 10 t hay per year / 3 cuts = 20 (E) -->
+                <fruitRequirement fruitTypeName="GRASS" removal="22" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="FIELDGRASS" removal="22" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="MEADOW" removal="22" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="ALFALFA" removal="20" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="CLOVER" removal="20" removalStraw="0"/>
+            </fruitRequirements>
+            <!-- kg P2O5 per 1000 l of product -->
+            <fillTypes>
+                <fillType name="MANURE" value="1.75"/>
+                <fillType name="LIQUIDMANURE" value="1.7"/>
+                <fillType name="DIGESTATE" value="3.0"/>
+                <fillType name="FERTILIZER" value="120"/>
+                <!-- Nitrosol / UAN is N only. For a liquid NPK set e.g. 100 (10 % per 1000 l at 1.0 t per 1000 l; UAN is 1.275, vinasse 1.26). -->
+                <fillType name="LIQUIDFERTILIZER" value="0"/>
+                <fillType name="CARBOLIME" value="18"/>
+                <!-- shop products (tools/generate_products.py): per 1000 l = density x 1000 kg x nutrient share -->
+                <fillType name="MAP11_52" value="499.2"/>
+                <fillType name="TSP46" value="506"/>
+                <fillType name="SSP18" value="189"/>
+                <fillType name="NPK15_15_15" value="157.5"/>
+                <fillType name="NPK8_24_24" value="252"/>
+                <fillType name="ELESZTOVINASZ" value="3.78"/>
+            </fillTypes>
+        </nutrientMap>
+
+        <!-- Potassium, kg K2O/ha, RELATIVE to the soil type target (see P): 8 bit, step 5, levelOffset 120: -600 .. +675, no soft cap
+             (the oversupply keys of the yield mapping reach +600).
+             No targetRemovalShare (default 0): the target is the soil type target for every crop, like P. The harvest removal lowers the
+             map, the automatic rate refills it (rate = gap to the target). A map maker can set targetRemovalShare on the map or on a
+             fruitRequirement to make K-hungry crops need a higher soil level. -->
+        <nutrientMap id="K" numChannels="8" step="5" levelOffset="120" unitFormat="%+d kg/ha K2O" legendMin="-600" legendMax="300" numBands="15" surplusColors="true" surplusFrom="200" strawChopperGain="0" catchCropGain="0">
+            <!-- Leaching: K2O lost with drainage water, kg K2O/ha/year per soil type (ESTIMATES, scaled from UK potash note 1.2 kg per
+                 100 mm on loam/clay, Danish study 0.6 vs 8.4 kg per 100 mm at 24 vs 5 % clay, 150-250 mm drainage per year). Only the
+                 content at or above the soil type target (level 0 kg/ha) leaches. weights = share per game period 1..12 (period 1 = March), wet cold
+                 months lose most. Normalised to sum 1; balance removalScale scales it. No <leaching> block = off. -->
+            <leaching weights="0.16 0.12 0.08 0.06 0.03 0.02 0.03 0.06 0.10 0.11 0.11 0.12">
+                <rate soilTypeIndex="1" value="40"/>
+                <rate soilTypeIndex="2" value="25"/>
+                <rate soilTypeIndex="3" value="15"/>
+                <rate soilTypeIndex="4" value="10"/>
+            </leaching>
+            <initialValues>
+                <!-- distance to the target in kg/ha, derived from the former absolute levels; worst start -180 (yield factor about 0.91) -->
+                <initialValue soilTypeIndex="1" deltas="-140 -60 20 60"/>
+                <initialValue soilTypeIndex="2" deltas="-180 -100 20 100"/>
+                <initialValue soilTypeIndex="3" deltas="-180 -100 20 100"/>
+                <initialValue soilTypeIndex="4" deltas="-180 -100 20 100"/>
+            </initialValues>
+            <targets>
+                <target soilTypeIndex="1" value="500"/>
+                <target soilTypeIndex="2" value="700"/>
+                <target soilTypeIndex="3" value="740"/>
+                <target soilTypeIndex="4" value="820"/>
+            </targets>
+            <yieldMappings>
+                <yieldMapping difference="-600" yieldFactor="0.65"/>
+                <yieldMapping difference="-400" yieldFactor="0.80"/>
+                <yieldMapping difference="-250" yieldFactor="0.88"/>
+                <yieldMapping difference="-100" yieldFactor="0.95"/>
+                <yieldMapping difference="0" yieldFactor="1.00"/>
+                <!-- Oversupply penalty, game balance with a mild agronomic basis (high K antagonises Mg uptake; no quantitative
+                     field data, real effect about 0-5 %). P has none: no sourced yield loss from soil P alone (maize P-Zn
+                     antagonism needs low Zn as well), and the map cap already makes overfertilizing wasteful. -->
+                <yieldMapping difference="200" yieldFactor="1.00"/>
+                <yieldMapping difference="400" yieldFactor="0.97"/>
+                <yieldMapping difference="600" yieldFactor="0.95"/>
+            </yieldMappings>
+            <fruitRequirements>
+                <fruitRequirement fruitTypeName="DEFAULT" targetScale="1" removal="50" removalStraw="80"/>
+                <fruitRequirement fruitTypeName="WHEAT" removal="44" removalStraw="90"/>
+                <fruitRequirement fruitTypeName="WINTERWHEAT" removal="44" removalStraw="90"/>
+                <fruitRequirement fruitTypeName="BARLEY" removal="42" removalStraw="120"/>
+                <fruitRequirement fruitTypeName="WINTERBARLEY" removal="42" removalStraw="120"/>
+                <fruitRequirement fruitTypeName="OAT" removal="31" removalStraw="62"/>
+                <fruitRequirement fruitTypeName="RYE" removal="33" removalStraw="67"/>
+                <fruitRequirement fruitTypeName="TRITICALE" removal="36" removalStraw="73"/>
+                <fruitRequirement fruitTypeName="SPELT" removal="28" removalStraw="56"/>
+                <fruitRequirement fruitTypeName="MAIZE" removal="55" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="SILAGEMAIZE" removal="190" removalStraw="0"/>
+                <!-- SORGHUM (E): silage maize 190 x ~0.9 (K per t DM slightly higher than maize). Cross-check: Embrapa ~15.7 kg K2O per t DM x 12 t DM = 188; UK maize silage 6.5 kg/t fresh. Not above silage maize without a source. -->
+                <fruitRequirement fruitTypeName="SORGHUM" removal="170" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="GREENRYE" removal="150" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="VETCHRYE" removal="155" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="CANOLA" removal="30" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="SUNFLOWER" removal="84" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="SUGARBEET" removal="175" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="POTATO" removal="240" removalStraw="0"/>
+                <!-- SOYBEAN 3 t/ha: IPNI/Ohio State about 57 kg K2O/ha, LfL 17 kg/t = 51 -->
+                <fruitRequirement fruitTypeName="SOYBEAN" removal="55" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="PEA" removal="40" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="FODDERPEA" removal="40" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="FABABEAN" removal="56" removalStraw="0"/>
+                <!-- per cut, 3 cuts a year (server practice). GRASS: LfL Basisdaten 2025 table 2, >= 3 cuts: 3.28 kg K2O/dt DM x 80 dt DM/ha / 3 cuts = 87.
+                     ALFALFA / CLOVER: about 28 kg K2O/t hay x 10 t hay per year / 3 cuts = 93 (E), clover slightly higher (30 kg/t): 100 -->
+                <fruitRequirement fruitTypeName="GRASS" removal="87" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="FIELDGRASS" removal="87" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="MEADOW" removal="87" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="ALFALFA" removal="93" removalStraw="0"/>
+                <fruitRequirement fruitTypeName="CLOVER" removal="100" removalStraw="0"/>
+            </fruitRequirements>
+            <fillTypes>
+                <fillType name="MANURE" value="4.2"/>
+                <fillType name="LIQUIDMANURE" value="5.0"/>
+                <fillType name="DIGESTATE" value="5.0"/>
+                <fillType name="FERTILIZER" value="120"/>
+                <!-- Nitrosol / UAN is N only. For a liquid NPK set e.g. 100 (10 % per 1000 l at 1.0 t per 1000 l; UAN is 1.275, vinasse 1.26). -->
+                <fillType name="LIQUIDFERTILIZER" value="0"/>
+                <fillType name="CARBOLIME" value="1.2"/>
+                <!-- shop products (tools/generate_products.py): per 1000 l = density x 1000 kg x nutrient share -->
+                <fillType name="KALISO60" value="660"/>
+                <fillType name="PATENTKALI" value="357"/>
+                <fillType name="NPK15_15_15" value="157.5"/>
+                <fillType name="NPK8_24_24" value="252"/>
+                <fillType name="ELESZTOVINASZ" value="37.8"/>
+            </fillTypes>
+        </nutrientMap>
+
+        <!-- Organic matter, RELATIVE to the soil type target. The map stores the distance to the target in percent points: unit = (level - levelOffset) x step.
+             Level 165 = on target, 0 = 4.01 below, 255 = 2.19 above (hard limits). Why: the PF overlay colours a pixel by its stored value alone, so only a relative
+             map can show "red = too little, green = fine" for every soil type (sand 1.8 %, chernozem 4.0 % are both green on target). The soil type targets below
+             still drive the mineralisation and the N release; the yield factor, the field info, the legend and vtszNutrientSet use the distance. -->
+        <!-- 8 bit, 0.0243 % per level. Changes below one level are rounded at random per application, so they average out.
+             gain: added at every harvest. strawGain: added instead of removalStraw when the straw chopper is on (default strawChopperGain).
+             destroyGain: added when the catch crop is ploughed in (default catchCropGain). -->
+        <nutrientMap id="OM" numChannels="8" step="0.0243137" unitFormat="%+.2f %%" levelOffset="165" legendMin="-1.4" legendMax="0.2" strawChopperGain="0" catchCropGain="0.008" yieldScaling="0.5" timeScale="6">
+            <!-- timeScale: multiplier of every change of the OM stock (mineralisation, removal, gains, catch crops, organic fertiliser OM). The values
+                 below are real time (VDLUFA, per year); on the server about 6 game years pass per real year, so 6 makes the map react at game speed.
+                 It keeps the balance (neutral rotations stay neutral). Not scaled: targets, nPerPercent (N is per game year), map step. 1 = real time. -->
+            <!-- forageRemoval (fruitRequirement): forage harvester header or mower step. Crop and straw both leave the field: change = -(max(removal, forageRemoval) + removalStraw), no gain.
+                 Only used when a fruit type sets it; no fruit type does now, all others take the grain harvest path with the straw taken. -->
+
+            <!-- Mineralisation: the continuous humus demand, rate = fraction of the soil type target lost per year. 0.00365 x 3.2 % = -0.0117 %-points/yr
+                 on loam = -280 Haeq/ha/yr, the VDLUFA humus demand of cereals (it is net of root and stubble input). Crops with a larger demand take the
+                 rest at harvest (fruitRequirements below). weights = share of the yearly loss per game period 1..12, period 1 = March
+                 (northern hemisphere): near zero in winter, peak in June-August. Normalised to sum 1. balance removalScale scales it too.
+                 Without tillage coupling. Rate 0 switches it off. -->
+            <mineralisation rate="0.00365" weights="0.06 0.09 0.11 0.13 0.15 0.15 0.12 0.08 0.05 0.02 0.02 0.02" nPerPercent="8"/>
+            <!-- nPerPercent: kg N/ha per year that the mineralising OM releases into PF's N map per 1 % of OM stock (stock = soil type target,
+                 same weights; balance removalScale scales it too, like the OM loss). Mass balance: the NET OM loss on loam (0.0117 %-points/yr = about 490 kg OM/ha, about 5 % N) carries about
+                 25 kg N, so 8 x 3.2 % = 26 kg N/ha/yr. Gross mineralisation is higher (literature +10..20 kg N per 1 % OM, UC ANR 22-45) but
+                 most of it is taken up again by residues and roots, and PF's N targets are already net of the soil supply.
+                 Rounded to PF's N states (amountPerState, 5 kg N) at random per period, so the field average is exact. 0 switches it off. -->
+            <!-- Start values as distance to the target in %-points (deltas, rounded to levels): about 0.3 below on average, worst -0.8, so the yield factor never starts below 0.92 -->
+            <initialValues>
+                <initialValue soilTypeIndex="1" deltas="-0.8 -0.6 -0.2 0"/>
+                <initialValue soilTypeIndex="2" deltas="-0.7 -0.5 -0.1 0.5"/>
+                <initialValue soilTypeIndex="3" deltas="-0.8 -0.2 0.4 0.8"/>
+                <initialValue soilTypeIndex="4" deltas="-0.8 -0.2 0.2 0.8"/>
+            </initialValues>
+            <!-- Hungarian conditions: clayey sand about 1.8 %, sandy loam 2.5 %, loam 3.2 %, silty clay (chernozem like) 4.0 % -->
+            <targets>
+                <target soilTypeIndex="1" value="1.8"/>
+                <target soilTypeIndex="2" value="2.5"/>
+                <target soilTypeIndex="3" value="3.2"/>
+                <target soilTypeIndex="4" value="4.0"/>
+            </targets>
+            <yieldMappings>
+                <!-- Steps of 0.2, linear in between. With timeScale 6 the stock moves fast, so the curve is soft at the start and steeper later.
+                     The worst start level is -0.8 below the target on every soil type: factor 0.92 (never below 0.90 at a new map). -->
+                <yieldMapping difference="-2.5" yieldFactor="0.68"/>
+                <yieldMapping difference="-2.0" yieldFactor="0.75"/>
+                <yieldMapping difference="-1.5" yieldFactor="0.82"/>
+                <yieldMapping difference="-1.25" yieldFactor="0.855"/>
+                <yieldMapping difference="-1.0" yieldFactor="0.89"/>
+                <yieldMapping difference="-0.8" yieldFactor="0.92"/>
+                <yieldMapping difference="-0.6" yieldFactor="0.95"/>
+                <yieldMapping difference="-0.4" yieldFactor="0.97"/>
+                <yieldMapping difference="-0.2" yieldFactor="0.99"/>
+                <yieldMapping difference="0" yieldFactor="1.00"/>
+            </yieldMappings>
+            <fruitRequirements>
+                <fruitRequirement fruitTypeName="DEFAULT" targetScale="1" removal="0" removalStraw="0"/>
+
+                <!-- Realism model (VDLUFA Standpunkt Humusbilanzierung 2014). 1 Haeq = 1 kg humus-C/ha, 1 % OM = 24 t C/ha, so 1 Haeq = 0.0000417 %-points.
+                     The continuous mineralisation below (rate 0.00365 x target = -0.0117 %-points/yr on loam) is the humus demand of cereals, -280 Haeq/ha/yr.
+                     A crop with a larger demand takes the difference at harvest (removal): silage and grain maize, carrot, parsnip -560 (0.01167),
+                     sugar beet, potato -760 (0.02). By-products add Haeq at 55 per t straw (gain / strawGain): yield x straw ratio x 55 / 24000,
+                     typical yields wheat 8 t (ratio 0.8), barley 7 (0.7), oat 5 (1.1), rye 6 (0.9), triticale 6.5 (0.9), spelt 5 (0.8), grain maize 10 (1.0),
+                     rapeseed 3.5 (1.7), sunflower 3.5 (2.0), sugar beet leaf 60 t x 0.7 at 8 Haeq/t. Cereal straw gives strawGain only when the chopper is on.
+                     Grain legumes +160 and perennial forage +400 Haeq/ha/yr are net values (residues included): harvest gain = (net + 280) / harvests per year
+                     (peas, beans, soy: 1 harvest; grass, alfalfa, clover: 3 cuts a year on the server, (400 + 280) / 3 = 226.7 Haeq = 0.00944). 55 is the long-term trial value (the VDLUFA default is 100, the upper end), so chopped
+                     straw about cancels the cereal humus demand and does not build humus much. Whole-crop cereal has no forageRemoval value yet: a forage
+                     harvest takes removal + removalStraw like baled straw. A planned value half way between baled straw (-280 Haeq/yr net) and
+                     silage maize (-560) is -420 (0.00583), an estimate; as a crop-only part it would add to removalStraw. Rice, green beans, beetroot: no VDLUFA value, treated like cereals. -->
+
+                <!-- Humus consuming (extra demand over cereals; silage and sorghum, green-cut cereals and sugar cane treated as silage maize) -->
+                <fruitRequirement fruitTypeName="SILAGEMAIZE" removal="0.01167"/>
+                <fruitRequirement fruitTypeName="SUGARCANE" removal="0.01167"/>
+                <fruitRequirement fruitTypeName="SORGHUM" removal="0.01167"/>
+                <fruitRequirement fruitTypeName="GREENRYE" removal="0.01167"/>
+                <fruitRequirement fruitTypeName="VETCHRYE" removal="0.01167"/>
+
+                <!-- Root crops (sugar beet: the leaf stays and gives back) -->
+                <fruitRequirement fruitTypeName="POTATO" removal="0.02"/>
+                <fruitRequirement fruitTypeName="SUGARBEET" removal="0.02" gain="0.014"/>
+
+                <!-- Vegetables and rice at cereal level or above -->
+                <fruitRequirement fruitTypeName="BEETROOT" removal="0"/>
+                <fruitRequirement fruitTypeName="CARROT" removal="0.01167"/>
+                <fruitRequirement fruitTypeName="PARSNIP" removal="0.01167"/>
+                <fruitRequirement fruitTypeName="RICE" removal="0"/>
+                <fruitRequirement fruitTypeName="RICELONGGRAIN" removal="0"/>
+                <fruitRequirement fruitTypeName="GREENBEAN" removal="0"/>
+
+                <!-- Cereals: chopped straw gives strawGain back; baled straw takes the same amount away (removalStraw = strawGain, the straw OM leaves the field) -->
+                <!-- No cereal sets forageRemoval, so a forage harvester header or mower step costs removal + removalStraw with no gain, the same as a grain harvest with the straw taken -->
+                <!-- (the grain has no removal of its own, its humus demand is in the continuous mineralisation) -->
+                <!-- Not verified in game: baled straw subtracts removalStraw on top of the mineralisation (about -630 Haeq/yr for wheat), not the -280 Haeq/yr net the model text above names -->
+
+                <fruitRequirement fruitTypeName="WHEAT" strawGain="0.01467" removalStraw="0.01467"/>
+                <fruitRequirement fruitTypeName="WINTERWHEAT" strawGain="0.01467" removalStraw="0.01467"/>
+                <fruitRequirement fruitTypeName="BARLEY" strawGain="0.01123" removalStraw="0.01123"/>
+                <fruitRequirement fruitTypeName="WINTERBARLEY" strawGain="0.01123" removalStraw="0.01123"/>
+                <fruitRequirement fruitTypeName="OAT" strawGain="0.0126" removalStraw="0.0126"/>
+                <fruitRequirement fruitTypeName="RYE" strawGain="0.01238" removalStraw="0.01238"/>
+                <fruitRequirement fruitTypeName="TRITICALE" strawGain="0.01341" removalStraw="0.01341"/>
+                <fruitRequirement fruitTypeName="SPELT" strawGain="0.00917" removalStraw="0.00917"/>
+
+                <!-- Grain maize: extra demand, the stover always stays -->
+                <fruitRequirement fruitTypeName="MAIZE" removal="0.01167" gain="0.02292"/>
+
+                <!-- Oil crops: demand = baseline, straw and stalks stay -->
+                <fruitRequirement fruitTypeName="CANOLA" gain="0.01364"/>
+                <fruitRequirement fruitTypeName="SUNFLOWER" gain="0.01604"/>
+
+                <!-- Grain legumes (net +160 Haeq/yr) -->
+                <fruitRequirement fruitTypeName="PEA" gain="0.01833"/>
+                <fruitRequirement fruitTypeName="FODDERPEA" gain="0.01833"/>
+                <fruitRequirement fruitTypeName="FABABEAN" gain="0.01833"/>
+                <fruitRequirement fruitTypeName="SOYBEAN" gain="0.01833"/>
+
+                <!-- Perennial forage, per cut, 3 cuts a year (net +400 Haeq/yr) -->
+                <fruitRequirement fruitTypeName="GRASS" gain="0.00944"/>
+                <fruitRequirement fruitTypeName="FIELDGRASS" gain="0.00944"/>
+                <fruitRequirement fruitTypeName="MEADOW" gain="0.00944"/>
+                <fruitRequirement fruitTypeName="ALFALFA" gain="0.00944"/>
+                <fruitRequirement fruitTypeName="CLOVER" gain="0.00944"/>
+
+                <!-- Catch crops and green manure, when ploughed in (see catchCrops). 20-40 t fresh matter/ha x 8 Haeq/t = 160-320 Haeq -->
+                <fruitRequirement fruitTypeName="OILSEEDRADISH" destroyGain="0.008"/>
+                <fruitRequirement fruitTypeName="MUSTARD" destroyGain="0.008"/>
+                <fruitRequirement fruitTypeName="FLOWERINGCATCHCROP" destroyGain="0.007"/>
+                <fruitRequirement fruitTypeName="HUMUSACTIVE" destroyGain="0.012"/>
+            </fruitRequirements>
+            <!-- percent points per 1000 l per ha, independent of the N content. VDLUFA Haeq per t fresh matter x density (t per 1000 l):
+                 cattle manure fresh 20 % DM 28 x 0.7 = 20 Haeq; cattle slurry 7 % DM 9 x 0.9 = 8; liquid digestate 7.5 % DM about 10 x 0.9 = 9. 1 Haeq = 0.0000417 %-points.
+                 25000 l/ha manure = +0.02 %-points. CARBOLIME and the yeast vinasse are estimates (no VDLUFA value). -->
+            <fillTypes>
+                <fillType name="MANURE" value="0.0008"/>
+                <fillType name="LIQUIDMANURE" value="0.00034"/>
+                <fillType name="DIGESTATE" value="0.00038"/>
+                <fillType name="CARBOLIME" value="0.00036"/>
+                <!-- shop products (tools/generate_products.py): per 1000 l = density x 1000 kg x nutrient share -->
+                <fillType name="ELESZTOVINASZ" value="0.0028"/>
+            </fillTypes>
+        </nutrientMap>
+    </nutrientMaps>
+</vtszNutrients>
