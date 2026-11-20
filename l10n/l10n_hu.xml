@@ -51,11 +51,12 @@
         <text name="input_VTSZ_MINIMAP_LAYER" text="Minitérkép réteg"/>
         <text name="input_VTSZ_AUTO_TOGGLE" text="Automata mennyiség (P/K termékek)"/>
         <text name="input_VTSZ_AUTO_BASE" text="Automata mennyiség alap tápanyaga"/>
-        <text name="vtsz_action_auto_on" text="Automata mennyiség: be"/>
-        <text name="vtsz_action_auto_off" text="Automata mennyiség: ki"/>
+        <text name="vtsz_action_auto_on" text="Automata mennyiség: bekapcsolása"/>
+        <text name="vtsz_action_auto_off" text="Automata mennyiség: kikapcsolása"/>
         <text name="vtsz_action_auto_base" text="Automata mennyiség alapja: %s"/>
-        <text name="vtsz_hud_auto" text=" (auto %s)"/>
-        <text name="vtsz_hud_auto_nodata" text=" (auto %s: nincs adat, kézi)"/>
+        <text name="vtsz_hud_auto" text="AUTO %s | "/>
+        <text name="vtsz_hud_auto_nodata" text="AUTO %s (nincs adat, kézi) | "/>
+        <text name="vtsz_hud_auto_nospray" text="AUTO %s (nincs adat, nem szór) | "/>
         <text name="vtsz_minimap_layer" text="Minitérkép réteg"/>
         <text name="vtsz_minimap_AUTO" text="Automatikus"/>
         <text name="vtsz_minimap_N" text="Nitrogén"/>

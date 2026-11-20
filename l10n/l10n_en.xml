@@ -51,11 +51,12 @@
         <text name="input_VTSZ_MINIMAP_LAYER" text="Minimap layer"/>
         <text name="input_VTSZ_AUTO_TOGGLE" text="Automatic rate (P/K products)"/>
         <text name="input_VTSZ_AUTO_BASE" text="Automatic rate base nutrient"/>
-        <text name="vtsz_action_auto_on" text="Automatic rate: on"/>
-        <text name="vtsz_action_auto_off" text="Automatic rate: off"/>
+        <text name="vtsz_action_auto_on" text="Activate automatic application rate"/>
+        <text name="vtsz_action_auto_off" text="Deactivate automatic application rate"/>
         <text name="vtsz_action_auto_base" text="Automatic rate base: %s"/>
-        <text name="vtsz_hud_auto" text=" (auto %s)"/>
-        <text name="vtsz_hud_auto_nodata" text=" (auto %s: no data, manual)"/>
+        <text name="vtsz_hud_auto" text="AUTO %s | "/>
+        <text name="vtsz_hud_auto_nodata" text="AUTO %s (no data, manual) | "/>
+        <text name="vtsz_hud_auto_nospray" text="AUTO %s (no data, no spray) | "/>
         <text name="vtsz_minimap_layer" text="Minimap layer"/>
         <text name="vtsz_minimap_AUTO" text="Auto"/>
         <text name="vtsz_minimap_N" text="Nitrogen"/>
